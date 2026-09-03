@@ -285,36 +285,37 @@ export const portfolioData: PortfolioConfig = {
       featured: true
     },
     {
-      id: "apex-gt-hypercar-cinematic",
-      specCode: "APX-GT-CINEMATIC",
-      title: "Apex GT Hypercar: Cinematic Lighting & Game Showcase",
-      subtitle: "16:9 marketing key visual, dynamic lighting rig, and high-CTR composition for racing game ecosystems",
+      id: "ferioli-hydrocrane-animation",
+      specCode: "FERIOLI-CRANE-3D",
+      title: "Ferioli: Hydraulic Crane Kinematics & 3D Animation",
+      subtitle: "SolidWorks CAD adaptation, model optimization, extra asset modeling, full PBR shading, and mechanical animation for national manufacturer Ferioli",
       category: "cinematic-game",
-      categoryLabel: "Cinematic & Game Art",
-      clientOrContext: "Automotive Art Exploration & Game Concept",
-      year: "2026",
-      heroImage: "/projects/driving-empire-hypercar.svg",
+      categoryLabel: "3D Animation & CAD",
+      clientOrContext: "Ferioli (Heavy Equipment Manufacturer)",
+      year: "2024",
+      heroImage: "/projects/ferioli-hidrogrua-hero.png",
       gallery: [
-        "/projects/driving-empire-hypercar.svg",
-        "/projects/vw-amarok-headlights.svg"
+        "/projects/ferioli-hidrogrua-hero.png",
+        "/projects/ferioli-hidrogrua-detail.png"
       ],
-      tags: ["Game Art", "Blender Cycles", "Automotive Lighting", "16:9 Marketing", "Roblox Ecosystem"],
-      tools: ["Blender 4.x (Cycles)", "Roblox Studio", "Adobe Photoshop", "Premiere Pro"],
+      videoUrl: "/videos/ferioli-hidrogrua-animation.mp4",
+      tags: ["Ferioli", "SolidWorks to Blender", "Mechanical Rigging", "PBR Materials", "Cinematic Animation"],
+      tools: ["SolidWorks", "Blender (Cycles)", "KeyShot", "Adobe Premiere Pro"],
       description:
-        "An artistic showcase translating real-world automotive proportions into an electrifying, high-CTR gaming visual. Featuring aggressive 3/4 front framing, rim lighting that chisels the aerodynamic diffuser, and physically calibrated metallic clearcoat shaders engineered to stand out on mobile screens and desktop storefronts.",
+        "Comprehensive 3D animation and mechanical visualization project for national crane manufacturer Ferioli. Received engineering SolidWorks CAD models and successfully adapted them in Blender: optimized geometry and retopology, modeled auxiliary operational assets, developed custom industrial PBR shaders (powder coating, hydraulic chrome rams, warning decals), and fully rigged the multi-stage telescopic boom, hydraulic cylinders, and stabilizers for realistic kinematic motion animation.",
       processBreakdown: [
-        "Imported and retopologized high-poly vehicle mesh for optimal ray-tracing in Blender Cycles.",
-        "Built PBR multi-layer shaders: deep metallic flake, realistic tire rubber scuff, and heated competition orange brake calipers.",
-        "Crafted a custom studio lighting environment with overhead softboxes and precision edge strip lights.",
-        "Color graded in Photoshop: lens flares, atmospheric dust particulates, and calibrated contrast for high click-through rates."
+        "Imported complex SolidWorks manufacturing assemblies into Blender and retopologized high-density CAD geometry.",
+        "Modeled auxiliary hardware assets, flexible hydraulic lines, chassis mountings, and operational decals.",
+        "Built custom PBR shader materials: weathered industrial coatings, reflective hydraulic chrome, and warning graphics.",
+        "Engineered kinematic mechanical rigging and keyframed the multi-stage extension, rotation, and stabilizer sequences for commercial video."
       ],
       engineeringSpecs: [
-        { label: "Aspect Ratio", value: "16:9 Key Art & 4K Render" },
-        { label: "Render Engine", value: "Blender Cycles + Roblox Studio" },
-        { label: "Focus", value: "High-CTR Marketing Visual" },
-        { label: "Pipeline", value: "Concept to Live-Ops Turnaround" }
+        { label: "Client", value: "Ferioli (National Crane Manufacturer)" },
+        { label: "CAD Origin", value: "SolidWorks Assembly" },
+        { label: "3D & Animation", value: "Blender (Cycles)" },
+        { label: "Deliverable", value: "High-Definition Mechanical Animation" }
       ],
-      deliverables: ["4K Marketing Hero Render", "1920x1080 Game Thumbnail", "60fps Cinematic Turntable Loop"],
+      deliverables: ["Full-sequence mechanical animation (60fps)", "High-resolution technical renders", "Optimized 3D asset library"],
       featured: true
     },
     {
