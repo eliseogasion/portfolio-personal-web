@@ -188,37 +188,30 @@ export const portfolioData: PortfolioConfig = {
 
   skillCategories: [
     {
-      title: "3D Surfacing & Modeling",
-      code: "01 // SURFACING_CAD",
+      title: "CAD & Automotive Surfacing",
+      code: "SURFACING_CAD",
       skills: [
-        { name: "CATIA V5 (Class-A & Complex Surfacing)", level: "OEM Expert", featured: true },
-        { name: "Blender (Cycles, Eevee & Geometry)", level: "Advanced", featured: true },
-        { name: "SolidWorks (Complex Surface & Weldments)", level: "Advanced", featured: true },
-        { name: "KeyShot (High-End Studio Rendering)", level: "Advanced", featured: true },
-        { name: "Roblox Studio (In-Engine & Lighting)", level: "Proficient", featured: true },
-        { name: "Reverse Engineering & 3D Scan", level: "Professional", featured: false }
+        { name: "CATIA V5 (GSD & Part Design)", level: "Class-A OEM Surfacing", featured: true },
+        { name: "SolidWorks", level: "Parametric Modeling", featured: true },
+        { name: "3D Scanning & Reverse Engineering", level: "Scan-to-CAD", featured: false }
       ]
     },
     {
-      title: "Lighting & Visual Post-Production",
-      code: "02 // LIGHTING_ART",
+      title: "Rendering & Post-Production",
+      code: "RENDERING_ART",
       skills: [
-        { name: "Cinematic Automotive Lighting", level: "Advanced", featured: true },
-        { name: "Multi-Layer Automotive Flake & Clearcoat", level: "Expert", featured: true },
-        { name: "Adobe Photoshop (Retouching & Key Art)", level: "Advanced", featured: true },
-        { name: "Adobe Premiere Pro (Video & Motion)", level: "Professional", featured: true },
-        { name: "High-CTR Marketing Thumbnail Design", level: "Art Direction", featured: true },
-        { name: "After Effects & Motion Graphics", level: "Intermediate", featured: false }
+        { name: "Blender (Cycles & Eevee)", level: "Lighting & PBR Shading", featured: true },
+        { name: "KeyShot", level: "Studio Vehicle Renders", featured: true },
+        { name: "Adobe Photoshop & Premiere", level: "Retouching & Video", featured: true }
       ]
     },
     {
-      title: "Industrial Rigor & Methodology",
-      code: "03 // METHODOLOGY",
+      title: "Real-time & Fabrication",
+      code: "ENGINE_FABRICATION",
       skills: [
-        { name: "Vehicle Proportions & Aerodynamic Form", level: "Design Mastery", featured: true },
-        { name: "Fluent English (B2 Conversational & Tech)", level: "Professional", featured: true },
-        { name: "CNC Machining & CAM Toolpaths (G-Code)", level: "Hands-on", featured: true },
-        { name: "Multinational Collaboration (US/EU/LatAm)", level: "Senior", featured: false }
+        { name: "Roblox Studio", level: "Self-taught • Personal Projects", featured: true },
+        { name: "CNC Machining (CAM / G-Code)", level: "Digital Fabrication", featured: false },
+        { name: "Technical English", level: "B2 Upper-Intermediate", featured: true }
       ]
     }
   ],
