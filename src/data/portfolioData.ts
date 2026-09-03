@@ -321,11 +321,11 @@ export const portfolioData: PortfolioConfig = {
     {
       id: "estudio55-manifiesto-craft",
       specCode: "E55-MNFST-BATCH01",
-      title: "Estudio 55: Manifiesto Collection & CNC Craftsmanship",
-      subtitle: "Bespoke solid wood furniture line, visible CNC joinery, and photorealistic commercial e-commerce renders",
+      title: "Estudio 55: Manifiesto Collection & Author Furniture",
+      subtitle: "Personal design studio and active venture: author furniture pieces, physical craft, and commercial visualization",
       category: "estudio-55",
       categoryLabel: "Estudio 55 // Venture",
-      clientOrContext: "Estudio 55 (Personal Design Studio & Brand)",
+      clientOrContext: "Estudio 55 (Independent Studio & Venture)",
       year: "2024 — Present",
       heroImage: "/projects/estudio55-silla-enzo.png",
       gallery: [
@@ -335,21 +335,21 @@ export const portfolioData: PortfolioConfig = {
         "/projects/estudio55-mesa-hans.png"
       ],
       videoUrl: "/videos/estudio55-silla-video.mp4",
-      tags: ["Estudio 55", "Solid Timber", "CNC Machining", "Commercial Renders", "Blender Cycles"],
-      tools: ["Blender Cycles", "SolidWorks / CATIA", "Aspire (CNC Toolpaths)", "KeyShot", "Photoshop"],
+      tags: ["Estudio 55", "Author Furniture", "Design Philosophy", "Physical Craft", "3D Visualization"],
+      tools: ["Blender Cycles", "SolidWorks / CAD", "KeyShot", "Photoshop"],
       description:
-        "Founded Estudio 55 to merge industrial engineering with timeless artisanal furniture design. The Manifiesto Collection (Enzo Chair, Ponti Chair, Saar Table, Hans Table) showcases my end-to-end capabilities: from parametric CAD design, CNC toolpath programming in 2-inch solid Laurel timber, and workshop prototyping, to photorealistic commercial renders and marketing videos.",
+        "Estudio 55 is my independent furniture design studio and ongoing entrepreneurial venture, run in parallel with my engineering career. It serves as my personal creative laboratory to express my own design philosophy: conceiving author furniture pieces (Enzo Chair, Ponti Chair, Saar Table), bridging physical craft with digital 3D visualization, and curating an authentic brand identity.",
       processBreakdown: [
-        "Formulated rationalist design language celebrating visible joinery as authentic craft.",
-        "Programmed multi-axis CNC G-Code toolpaths ensuring zero-tolerance friction fits.",
-        "Calibrated PBR shaders in Blender: natural wood grain pores, polyurethane matte finishes, and authentic studio reflections.",
-        "Directed marketing assets, animated turnaround video, and visual catalog for the limited numbered Batch 01."
+        "Conceptualized author furniture collection guided by honest construction and timeless proportions.",
+        "Engineered 3D models and verified mechanical joinery for workshop production.",
+        "Created photorealistic commercial renders and animated joinery showcases for direct catalog presentation.",
+        "Managed active brand operations: creative direction, production runs, and digital presence."
       ],
       engineeringSpecs: [
-        { label: "Studio", value: "Estudio 55 (Founder & Lead Designer)" },
-        { label: "Material", value: "2-Inch Solid Laurel Timber / Matte Finish" },
-        { label: "Production", value: "Precision CNC Machining + Hand Finishing" },
-        { label: "Commercial Rollout", value: "Batch 01 Limited & Numbered Series" }
+        { label: "Studio", value: "Estudio 55 (Founder & Creative Director)" },
+        { label: "Venture Status", value: "Active Parallel Studio" },
+        { label: "Design Scope", value: "Author Furniture & Brand Identity" },
+        { label: "Key Pieces", value: "Enzo Chair, Saar Table, Hans Table" }
       ],
       deliverables: [
         "Workshop-manufactured furniture lineup",
