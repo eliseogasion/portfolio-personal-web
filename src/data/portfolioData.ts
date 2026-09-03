@@ -209,7 +209,7 @@ export const portfolioData: PortfolioConfig = {
       title: "Real-time & Fabrication",
       code: "ENGINE_FABRICATION",
       skills: [
-        { name: "Roblox Studio", level: "Self-taught • Personal Projects", featured: true },
+        { name: "Roblox Studio", level: "Lighting & Real-time Assets", featured: true },
         { name: "CNC Machining (CAM / G-Code)", level: "Digital Fabrication", featured: false },
         { name: "Technical English", level: "B2 Upper-Intermediate", featured: true }
       ]

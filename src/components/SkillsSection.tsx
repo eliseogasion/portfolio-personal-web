@@ -24,7 +24,7 @@ export default function SkillsSection() {
           </div>
 
           <p className="text-xs sm:text-sm text-zinc-400 max-w-md font-light leading-relaxed">
-            Practical software used in daily production. My experience with <strong className="text-white font-normal">Roblox Studio is self-taught</strong> through hands-on personal projects and automotive lighting exploration.
+            Production-tested software stack bridging high-precision Class-A automotive CAD with creative lighting, PBR materials, and real-time visualization.
           </p>
         </div>
 
