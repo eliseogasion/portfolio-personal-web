@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0d0e12" />
+      <stop offset="50%" stop-color="#141721" />
+      <stop offset="100%" stop-color="#08090c" />
+    </linearGradient>
+    <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.28" />
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="1" />
+    </pattern>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="15" stdDeviation="25" flood-color="#000" flood-opacity="0.8"/>
+    </filter>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#bg)" />
+  <rect width="100%" height="100%" fill="url(#grid)" />
+  <circle cx="640" cy="360" r="420" fill="url(#glow)" />
+
+  <!-- Abstract 3D Geometric Silhouette representing automotive/industrial curves -->
+  <g transform="translate(640, 330)" filter="url(#shadow)">
+    <!-- Chassis / Product curve -->
+    <path d="M -380 90 C -260 -40, -120 -110, 0 -110 C 120 -110, 260 -40, 380 90 L 320 110 C 220 -10, 100 -70, 0 -70 C -100 -70, -220 -10, -320 110 Z" fill="#10b981" opacity="0.85" />
+    
+    <!-- Accent speed lines -->
+    <path d="M -450 140 L 450 140" stroke="rgba(255,255,255,0.15)" stroke-width="2" stroke-dasharray="10 15" />
+    <path d="M -300 130 C -150 70, 150 70, 300 130" stroke="#10b981" stroke-width="3" fill="none" opacity="0.7"/>
+
+    <!-- Wheel arches / Mechanical accents -->
+    <circle cx="-240" cy="110" r="60" fill="none" stroke="#10b981" stroke-width="6" opacity="0.4" />
+    <circle cx="240" cy="110" r="60" fill="none" stroke="#10b981" stroke-width="6" opacity="0.4" />
+    
+    <!-- Central cockpit / Core silhouette -->
+    <ellipse cx="0" cy="-40" rx="140" ry="45" fill="rgba(255,255,255,0.06)" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+    <ellipse cx="0" cy="-35" rx="110" ry="30" fill="none" stroke="#10b981" stroke-width="1.5" opacity="0.8"/>
+  </g>
+
+  <!-- Title Badge -->
+  <g transform="translate(80, 80)">
+    <rect x="0" y="0" width="180" height="34" rx="17" fill="rgba(255,255,255,0.05)" stroke="rgba(255,255,255,0.12)" stroke-width="1"/>
+    <circle cx="18" cy="17" r="5" fill="#10b981" />
+    <text x="32" y="22" fill="#e2e8f0" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="600" letter-spacing="1.5">3D RENDER</text>
+  </g>
+
+  <!-- Center Text Overlay -->
+  <text x="640" y="550" text-anchor="middle" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="34" font-weight="800" letter-spacing="-0.5">Estudio 55: Enclosure Tecnológico Hard-Surface</text>
+  <text x="640" y="590" text-anchor="middle" fill="#94a3b8" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="18" font-weight="400" letter-spacing="0.5">Diseño para Manufactura, Tolerancias y Render de Estudio</text>
+
+  <!-- Tagline at bottom -->
+  <text x="640" y="650" text-anchor="middle" fill="#10b981" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="700" letter-spacing="3" opacity="0.9">CLICK TO EXPAND / REEMPLAZAR CON TU RENDER</text>
+</svg>
