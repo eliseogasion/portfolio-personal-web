@@ -12,9 +12,10 @@ export default function ProjectGallery() {
 
   const categories = [
     { id: 'all', label: 'TODOS // ALL', icon: LayoutGrid },
+    { id: 'estudio-55', label: 'ESTUDIO 55 (VENTURE & MOBILIARIO)', icon: Compass },
     { id: 'automotive-oem', label: 'OEM AUTOMOTIVE (VW & RENAULT)', icon: Car },
     { id: 'roblox-gaming', label: 'ROBLOX & GAMING (DRIVING EMPIRE)', icon: Gamepad2 },
-    { id: 'product-sim', label: 'SIMULACIÓN & HARDWARE (UNC)', icon: Compass },
+    { id: 'product-sim', label: 'SIMULACIÓN & HARDWARE (UNC)', icon: LayoutGrid },
   ];
 
   const filteredProjects =

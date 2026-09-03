@@ -3,7 +3,7 @@ export interface ProjectItem {
   specCode: string;
   title: string;
   subtitle: string;
-  category: 'automotive-oem' | 'roblox-gaming' | 'product-sim';
+  category: 'automotive-oem' | 'roblox-gaming' | 'estudio-55' | 'product-sim';
   categoryLabel: string;
   clientOrContext: string;
   year: string;
@@ -223,6 +223,47 @@ export const portfolioData: PortfolioConfig = {
   ],
 
   projects: [
+    {
+      id: "estudio55-coleccion-manifiesto",
+      specCode: "E55-MNFST-BATCH01",
+      title: "Estudio 55: Colección Manifiesto & Mecanizado CNC",
+      subtitle: "Diseño de mobiliario de autor, encastres vistos al descubierto y renders comerciales fotorrealistas",
+      category: "estudio-55",
+      categoryLabel: "Estudio 55 / Venture",
+      clientOrContext: "Estudio 55 (Emprendimiento Propio)",
+      year: "2024 — Actualidad",
+      heroImage: "/projects/estudio55-silla-enzo.png",
+      gallery: [
+        "/projects/estudio55-silla-enzo.png",
+        "/projects/estudio55-mesa-saar.png",
+        "/projects/estudio55-living.png",
+        "/projects/estudio55-mesa-hans.png"
+      ],
+      videoUrl: "/videos/estudio55-silla-video.mp4",
+      tags: ["Estudio 55", "Madera Maciza", "Mecanizado CNC", "Renders Comerciales", "Blender Cycles"],
+      tools: ["Blender Cycles", "SolidWorks / CATIA", "Aspire (CNC G-Code)", "KeyShot", "Photoshop"],
+      description:
+        "Fundación y desarrollo integral de Estudio 55. Creación de la Colección Manifiesto (Silla Enzo, Silla Ponti, Mesa Saar y Mesa Hans). El proyecto sintetiza mi perfil multidisciplinar: desde la concepción formal y planos de corte CNC en Laurel macizo de 2 pulgadas, hasta la producción de renders comerciales fotorrealistas con shaders precisos de madera y laca mate para canales de venta directa.",
+      processBreakdown: [
+        "Concepción formal racionalista inspirada en Enzo Mari y Gio Ponti, con foco en ensambles vistos.",
+        "Modelado CAD paramétrico y programación de trayectorias CNC (G-Code) para corte milimétrico en taller.",
+        "Setup de iluminación y texturizado PBR en Blender: veta de madera natural, rugosidad de laca poliuretánica mate y tapizados.",
+        "Generación de turnarounds cinemáticos en video y piezas gráficas para lanzamiento comercial del Batch 01."
+      ],
+      engineeringSpecs: [
+        { label: "Proyecto", value: "Estudio 55 (Cincuenta y Cinco)" },
+        { label: "Rol", value: "Fundador, Diseñador & 3D Artist" },
+        { label: "Fabricación", value: "Mecanizado CNC + Laurel Macizo 2\"" },
+        { label: "Lanzamiento", value: "Batch 01 Limitado y Numerado" }
+      ],
+      deliverables: [
+        "Línea de mobiliario producida en taller",
+        "Renders de catálogo fotorrealistas",
+        "Video promocional de uniones cinemáticas (MP4 60fps)",
+        "Estrategia de marca y manual de identidad"
+      ],
+      featured: true
+    },
     {
       id: "vw-amarok-2024-headlights",
       specCode: "VW-AMK-2024-OPTICS",
