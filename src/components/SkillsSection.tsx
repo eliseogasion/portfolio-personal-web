@@ -7,71 +7,55 @@ export default function SkillsSection() {
   const { skillCategories } = portfolioData;
 
   return (
-    <section id="skills" className="py-24 bg-[#08080c] border-t border-white/10 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="py-24 md:py-32 bg-[#0E0E11] border-t border-white/5">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Section Header */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
           <div>
-            <div className="flex items-center gap-2 font-mono text-xs font-bold text-[#FF3E00] uppercase tracking-widest mb-2">
-              <span className="w-1.5 h-1.5 bg-[#FF3E00] rounded-full" />
-              <span>05 // SOFTWARE STACK & TECHNICAL CAPABILITIES</span>
+            <div className="flex items-center gap-2.5 mb-2">
+              <span className="w-2 h-2 rounded-full bg-[#D5001C]" />
+              <span className="text-xs uppercase tracking-[0.2em] font-medium text-zinc-400">
+                Competencies
+              </span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight uppercase">
-              CORE TOOLS & EXPERTISE
+            <h2 className="text-3xl sm:text-5xl font-bold text-white tracking-tight">
+              Software Stack &amp; Capabilities.
             </h2>
           </div>
 
-          <div className="font-mono text-xs text-zinc-400 max-w-sm leading-relaxed">
-            The intersection between heavy automotive engineering CAD (CATIA V5, SolidWorks) and digital rendering pipelines (Blender Cycles, KeyShot, Adobe Suite, Roblox Studio).
-          </div>
+          <p className="text-sm text-zinc-400 max-w-sm font-light leading-relaxed">
+            Proficiency across high-end automotive CAD platforms and artistic digital rendering environments.
+          </p>
         </div>
 
-        {/* 3-Column Matrix */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 font-mono">
+        {/* 3-Column Clean Matrix */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {skillCategories.map((category, idx) => (
             <div
               key={idx}
-              className="p-6 bg-black border border-white/10 flex flex-col justify-between"
+              className="p-8 rounded-xl bg-white/[0.03] border border-white/10 flex flex-col justify-between"
             >
               <div>
-                <div className="flex items-center justify-between pb-3 mb-5 border-b border-white/10">
-                  <span className="text-xs font-black text-[#FF3E00] uppercase tracking-wider">
-                    {category.code}
-                  </span>
-                  <span className="w-1.5 h-1.5 bg-[#FF3E00]" />
-                </div>
-
-                <h3 className="text-base font-bold text-white uppercase tracking-tight mb-5">
+                <h3 className="text-base font-semibold text-white tracking-tight pb-4 mb-6 border-b border-white/10">
                   {category.title}
                 </h3>
 
-                <div className="space-y-2.5">
+                <div className="space-y-3">
                   {category.skills.map((skill, sIdx) => (
                     <div
                       key={sIdx}
-                      className={`p-3 border flex items-center justify-between text-xs transition-colors ${
-                        skill.featured
-                          ? 'bg-zinc-900/90 border-[#FF3E00]/40 text-white'
-                          : 'bg-zinc-950/50 border-white/5 text-zinc-400'
-                      }`}
+                      className="flex items-center justify-between text-xs py-2 border-b border-white/5 last:border-none"
                     >
-                      <div className="flex items-center gap-2">
-                        <span className={skill.featured ? 'text-[#FF3E00]' : 'text-zinc-600'}>
-                          ►
-                        </span>
-                        <span className="font-semibold uppercase">{skill.name}</span>
-                      </div>
+                      <span className={`font-normal ${skill.featured ? 'text-white' : 'text-zinc-400'}`}>
+                        {skill.name}
+                      </span>
 
-                      <span className="text-[10px] text-zinc-500 font-bold">
+                      <span className="text-[11px] text-zinc-500 font-medium">
                         {skill.level}
                       </span>
                     </div>
                   ))}
                 </div>
-              </div>
-
-              <div className="pt-5 mt-6 border-t border-white/5 text-[10px] text-zinc-600 uppercase text-center">
-                // PRODUCTION VERIFIED
               </div>
             </div>
           ))}

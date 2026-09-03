@@ -70,47 +70,49 @@ export default function LightboxModal({
   const hasNext = currentIndex < projectsList.length - 1;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 md:p-6 bg-black/95 backdrop-blur-md">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 md:p-10 bg-black/90 backdrop-blur-xl animate-in fade-in duration-200">
       <div className="absolute inset-0" onClick={onClose} />
 
-      <div className="relative w-full max-w-6xl max-h-[95vh] bg-[#050507] border border-white/20 rounded-xs shadow-2xl overflow-hidden flex flex-col z-10">
-        {/* Telemetry Header */}
-        <div className="flex items-center justify-between px-6 py-3.5 border-b border-white/10 bg-black font-mono">
+      <div className="relative w-full max-w-6xl max-h-[92vh] bg-[#0E0E11] border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col z-10">
+        {/* Header */}
+        <div className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-[#0B0B0D]">
           <div className="flex items-center gap-3">
-            <span className="text-xs font-bold px-2 py-0.5 bg-[#FF3E00] text-black tracking-wider">
-              {project.specCode}
+            <span className="text-xs uppercase tracking-wider font-semibold px-2.5 py-1 rounded-full bg-white/10 text-white">
+              {project.categoryLabel}
             </span>
-            <span className="text-xs text-zinc-400">
-              CONTEXT // <strong className="text-white">{project.clientOrContext}</strong>
+            <span className="text-xs text-zinc-400 font-medium">
+              {project.clientOrContext} • {project.year}
             </span>
           </div>
 
-          <div className="flex items-center gap-2">
-            <button
-              onClick={() => hasPrev && onSelectProject(projectsList[currentIndex - 1])}
-              disabled={!hasPrev}
-              className="p-1.5 text-zinc-400 hover:text-white disabled:opacity-20 transition-colors"
-              title="Previous (←)"
-            >
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-            <span className="text-xs text-zinc-500">
-              {currentIndex + 1} / {projectsList.length}
-            </span>
-            <button
-              onClick={() => hasNext && onSelectProject(projectsList[currentIndex + 1])}
-              disabled={!hasNext}
-              className="p-1.5 text-zinc-400 hover:text-white disabled:opacity-20 transition-colors"
-              title="Next (→)"
-            >
-              <ChevronRight className="w-5 h-5" />
-            </button>
+          <div className="flex items-center gap-3">
+            <div className="flex items-center gap-1">
+              <button
+                onClick={() => hasPrev && onSelectProject(projectsList[currentIndex - 1])}
+                disabled={!hasPrev}
+                className="p-1.5 rounded-full hover:bg-white/10 text-zinc-400 hover:text-white disabled:opacity-20 transition-all"
+                title="Previous (←)"
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </button>
+              <span className="text-xs text-zinc-500 font-mono px-1">
+                {currentIndex + 1} / {projectsList.length}
+              </span>
+              <button
+                onClick={() => hasNext && onSelectProject(projectsList[currentIndex + 1])}
+                disabled={!hasNext}
+                className="p-1.5 rounded-full hover:bg-white/10 text-zinc-400 hover:text-white disabled:opacity-20 transition-all"
+                title="Next (→)"
+              >
+                <ChevronRight className="w-5 h-5" />
+              </button>
+            </div>
 
-            <div className="w-[1px] h-4 bg-white/10 mx-2" />
+            <div className="w-[1px] h-4 bg-white/10" />
 
             <button
               onClick={onClose}
-              className="p-1.5 text-zinc-400 hover:text-[#FF3E00] transition-colors"
+              className="p-1.5 rounded-full hover:bg-white/10 text-zinc-400 hover:text-white transition-all"
               title="Close (Esc)"
             >
               <X className="w-5 h-5" />
@@ -119,11 +121,11 @@ export default function LightboxModal({
         </div>
 
         {/* Scrollable Content */}
-        <div className="overflow-y-auto flex-grow divide-y divide-white/10">
-          {/* Main Display */}
-          <div className="bg-black/90 p-4 sm:p-6 flex flex-col items-center justify-center min-h-[320px] md:min-h-[440px]">
+        <div className="overflow-y-auto flex-grow divide-y divide-white/5">
+          {/* Main Visual Display */}
+          <div className="bg-black p-6 flex flex-col items-center justify-center min-h-[360px] md:min-h-[480px]">
             {project.videoUrl ? (
-              <div className="w-full max-w-4xl aspect-video rounded-xs overflow-hidden bg-black shadow-2xl relative border border-white/10">
+              <div className="w-full max-w-4xl aspect-video rounded-xl overflow-hidden bg-black shadow-2xl relative">
                 <video
                   src={project.videoUrl}
                   controls
@@ -135,7 +137,7 @@ export default function LightboxModal({
                 />
               </div>
             ) : (
-              <div className="relative w-full max-w-4xl aspect-video rounded-xs overflow-hidden shadow-2xl bg-zinc-950 border border-white/10">
+              <div className="relative w-full max-w-4xl aspect-[16/10] rounded-xl overflow-hidden shadow-2xl bg-zinc-950">
                 <Image
                   src={currentImage}
                   alt={project.title}
@@ -148,15 +150,15 @@ export default function LightboxModal({
             )}
 
             {currentMediaList.length > 1 && (
-              <div className="flex items-center gap-2 mt-4 overflow-x-auto pb-1 max-w-full">
+              <div className="flex items-center gap-2 mt-6 overflow-x-auto pb-1 max-w-full">
                 {currentMediaList.map((img, idx) => (
                   <button
                     key={idx}
                     onClick={() => setActiveMediaIndex(idx)}
-                    className={`relative w-20 aspect-video rounded-xs overflow-hidden border-2 transition-all flex-shrink-0 ${
+                    className={`relative w-20 aspect-video rounded-lg overflow-hidden border-2 transition-all flex-shrink-0 ${
                       activeMediaIndex === idx
-                        ? 'border-[#FF3E00] shadow-md shadow-[#FF3E00]/40'
-                        : 'border-white/10 opacity-60 hover:opacity-100'
+                        ? 'border-white shadow-lg shadow-white/10 scale-105'
+                        : 'border-white/10 opacity-50 hover:opacity-100'
                     }`}
                   >
                     <Image src={img} alt={`Angle ${idx + 1}`} fill className="object-cover" />
@@ -166,41 +168,41 @@ export default function LightboxModal({
             )}
           </div>
 
-          {/* Technical Dossier */}
-          <div className="p-6 md:p-8 bg-[#050507] grid grid-cols-1 lg:grid-cols-12 gap-8 font-sans">
+          {/* Editorial Technical Dossier */}
+          <div className="p-8 md:p-12 bg-[#0E0E11] grid grid-cols-1 lg:grid-cols-12 gap-12">
             {/* Left: Overview & Pipeline */}
-            <div className="lg:col-span-7 space-y-6">
+            <div className="lg:col-span-7 space-y-8">
               <div>
-                <h2 className="text-2xl font-black text-white tracking-tight uppercase mb-2">
+                <h2 className="text-2xl sm:text-3xl font-bold text-white tracking-tight mb-2">
                   {project.title}
                 </h2>
-                <p className="text-xs sm:text-sm text-zinc-400 font-mono">
+                <p className="text-sm text-zinc-400 font-normal leading-relaxed">
                   {project.subtitle}
                 </p>
               </div>
 
               <div>
-                <h4 className="font-mono text-xs font-bold text-[#FF3E00] uppercase tracking-wider mb-2">
-                  // OVERVIEW & DESIGN INTENT
+                <h4 className="text-xs uppercase tracking-widest font-semibold text-zinc-400 mb-3">
+                  Overview &amp; Design Intent
                 </h4>
-                <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed font-normal">
+                <p className="text-sm text-zinc-300 font-light leading-relaxed">
                   {project.description}
                 </p>
               </div>
 
               {project.processBreakdown && (
                 <div>
-                  <h4 className="font-mono text-xs font-bold text-[#FF3E00] uppercase tracking-wider mb-3">
-                    // DEVELOPMENT & RENDERING PIPELINE
+                  <h4 className="text-xs uppercase tracking-widest font-semibold text-zinc-400 mb-4">
+                    Development &amp; Rendering Pipeline
                   </h4>
-                  <div className="space-y-2">
+                  <div className="space-y-2.5">
                     {project.processBreakdown.map((step, sIdx) => (
                       <div
                         key={sIdx}
-                        className="flex items-start gap-3 text-xs text-zinc-300 bg-zinc-900/60 p-3 rounded-xs border border-white/5 font-mono"
+                        className="flex items-start gap-3 text-xs sm:text-sm text-zinc-300 bg-white/5 p-4 rounded-xl font-light"
                       >
-                        <div className="w-1.5 h-1.5 bg-[#FF3E00] mt-1.5 flex-shrink-0" />
-                        <span className="leading-relaxed font-sans">{step}</span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-white mt-2 flex-shrink-0" />
+                        <span className="leading-relaxed">{step}</span>
                       </div>
                     ))}
                   </div>
@@ -209,30 +211,30 @@ export default function LightboxModal({
             </div>
 
             {/* Right: Telemetry Specs & Deliverables */}
-            <div className="lg:col-span-5 space-y-6 lg:border-l lg:border-white/10 lg:pl-8 font-mono">
+            <div className="lg:col-span-5 space-y-8 lg:border-l lg:border-white/10 lg:pl-12">
               <div>
-                <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-3 pb-2 border-b border-white/10">
-                  // PROJECT SPECIFICATIONS
+                <h4 className="text-xs uppercase tracking-widest font-semibold text-zinc-400 mb-4 pb-2 border-b border-white/10">
+                  Project Specifications
                 </h4>
-                <div className="space-y-2 text-xs">
+                <div className="space-y-3 text-xs">
                   {project.engineeringSpecs.map((spec, idx) => (
                     <div key={idx} className="flex justify-between py-1 border-b border-white/5">
-                      <span className="text-zinc-500">{spec.label}</span>
-                      <span className="text-zinc-200 font-bold">{spec.value}</span>
+                      <span className="text-zinc-500 font-normal">{spec.label}</span>
+                      <span className="text-white font-medium">{spec.value}</span>
                     </div>
                   ))}
                 </div>
               </div>
 
               <div>
-                <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-3">
-                  // SOFTWARE & ENVIRONMENT
+                <h4 className="text-xs uppercase tracking-widest font-semibold text-zinc-400 mb-3">
+                  Tools &amp; Environment
                 </h4>
-                <div className="flex flex-wrap gap-1.5">
+                <div className="flex flex-wrap gap-2">
                   {project.tools.map((tool, tIdx) => (
                     <span
                       key={tIdx}
-                      className="text-xs px-2.5 py-1 bg-zinc-900 text-zinc-200 border border-white/10"
+                      className="text-xs px-3 py-1 rounded-full bg-white/10 text-white font-normal"
                     >
                       {tool}
                     </span>
@@ -242,13 +244,13 @@ export default function LightboxModal({
 
               {project.deliverables && (
                 <div>
-                  <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-2">
-                    // KEY DELIVERABLES
+                  <h4 className="text-xs uppercase tracking-widest font-semibold text-zinc-400 mb-3">
+                    Deliverables
                   </h4>
-                  <ul className="space-y-1 text-xs text-zinc-400">
+                  <ul className="space-y-1.5 text-xs text-zinc-400 font-light">
                     {project.deliverables.map((deliv, dIdx) => (
                       <li key={dIdx} className="flex items-center gap-2">
-                        <span className="text-[#FF3E00]">►</span>
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#D5001C]" />
                         <span>{deliv}</span>
                       </li>
                     ))}

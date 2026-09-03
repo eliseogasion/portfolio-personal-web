@@ -1,10 +1,9 @@
 @import "tailwindcss";
 
 :root {
-  --background: #050507;
-  --foreground: #f4f4f5;
-  --accent-orange: #FF3E00;
-  --accent-titanium: #1e1e24;
+  --background: #0b0b0d;
+  --foreground: #f4f4f6;
+  --accent-red: #d5001c;
 }
 
 html {
@@ -13,41 +12,29 @@ html {
 }
 
 body {
-  background-color: #050507;
-  color: #f4f4f5;
+  background-color: #0b0b0d;
+  color: #f4f4f6;
   font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   overflow-x: hidden;
+  letter-spacing: -0.01em;
 }
 
 ::selection {
-  background: #FF3E00;
+  background: #ffffff;
   color: #000000;
 }
 
-/* Blueprint CAD grid background pattern */
-.bg-cad-grid {
-  background-size: 40px 40px;
-  background-image: 
-    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-}
-
-.bg-cad-dots {
-  background-size: 24px 24px;
-  background-image: radial-gradient(rgba(255, 62, 0, 0.15) 1px, transparent 0);
-}
-
-/* Custom sleek technical dark scrollbar */
+/* Custom quiet luxury scrollbar */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: #050507;
+  background: #0b0b0d;
 }
 ::-webkit-scrollbar-thumb {
-  background: #27272f;
-  border-radius: 2px;
+  background: #232328;
+  border-radius: 4px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #FF3E00;
+  background: #383842;
 }

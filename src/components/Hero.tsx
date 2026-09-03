@@ -1,102 +1,139 @@
 'use client';
 
 import React from 'react';
+import Image from 'next/image';
 import { portfolioData } from '@/data/portfolioData';
-import { ArrowRight, Download, Gamepad2 } from 'lucide-react';
+import { ArrowRight, Download, ArrowUpRight } from 'lucide-react';
 
 export default function Hero() {
-  const { personal, telemetryStats } = portfolioData;
+  const { personal } = portfolioData;
 
   return (
-    <section className="relative pt-32 pb-20 md:pt-44 md:pb-32 overflow-hidden bg-[#050507] bg-cad-grid">
-      {/* Background ambient lighting */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#FF3E00]/10 blur-[160px] rounded-full pointer-events-none -z-10" />
+    <section className="relative pt-36 pb-24 md:pt-48 md:pb-36 bg-[#0B0B0D] overflow-hidden">
+      {/* Subtle ambient light gradient */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[400px] bg-gradient-to-b from-white/5 to-transparent blur-[140px] pointer-events-none -z-10" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Telemetry Header Badge */}
-        <div className="flex flex-wrap items-center gap-3 mb-6">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-xs bg-black border border-[#FF3E00]/40 text-[#FF3E00] font-mono text-[11px] font-bold tracking-wider">
-            <span className="w-1.5 h-1.5 rounded-full bg-[#FF3E00] animate-ping" />
-            <span>PORTFOLIO SPECIFICATION // 2026</span>
-          </div>
-
-          <div className="hidden sm:inline-flex items-center gap-2 text-[11px] font-mono text-zinc-400">
-            <span>STATUS:</span>
-            <span className="text-white font-semibold">AVAILABLE FOR SELECT 3D & AUTOMOTIVE ART ROLES</span>
-          </div>
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        {/* Editorial Subtitle */}
+        <div className="flex items-center gap-3 mb-6">
+          <span className="w-2 h-2 rounded-full bg-[#D5001C]" />
+          <span className="text-xs uppercase tracking-[0.2em] font-medium text-zinc-400">
+            Automotive Surfacing &amp; Cinematic 3D
+          </span>
         </div>
 
-        {/* Main Massive Titles */}
-        <div className="mb-8">
-          <h1 className="text-5xl sm:text-7xl lg:text-8xl font-black text-white tracking-tighter uppercase leading-[0.95] mb-4">
-            ELISEO GASIÓN
+        {/* Main Headline */}
+        <div className="max-w-4xl mb-8">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.05] mb-6">
+            Precision engineering.<br />
+            <span className="text-zinc-400 font-normal">Cinematic visual art.</span>
           </h1>
-          <div className="flex flex-col sm:flex-row sm:items-baseline gap-2 sm:gap-4">
-            <span className="text-xl sm:text-3xl lg:text-4xl font-black text-[#FF3E00] tracking-tight uppercase">
-              INDUSTRIAL DESIGNER
-            </span>
-            <span className="hidden sm:inline text-zinc-600 font-mono text-2xl">//</span>
-            <span className="text-xl sm:text-3xl lg:text-4xl font-bold text-zinc-400 tracking-tight uppercase">
-              AUTOMOTIVE 3D & RENDER ARTIST
-            </span>
-          </div>
-        </div>
 
-        {/* Value Proposition Description */}
-        <div className="max-w-3xl mb-12">
-          <p className="text-base sm:text-lg text-zinc-300 leading-relaxed font-normal">
-            Backed by <strong className="text-white font-semibold">+5 years of engineering complex Class-A surfaces</strong> for the real automotive industry (<strong className="text-white font-semibold">Volkswagen Amarok 2024 headlights</strong>, <strong className="text-white font-semibold">Renault H1312 bodywork</strong>), paired with a lifelong creative drive for <strong className="text-[#FF3E00] font-semibold">cinematic 3D rendering, automotive lighting, and game art</strong>.
+          <p className="text-base sm:text-xl text-zinc-300 font-light leading-relaxed max-w-3xl">
+            Industrial Designer with +5 years shaping real-world Class-A automotive surfaces for{' '}
+            <strong className="text-white font-medium">Volkswagen</strong> and{' '}
+            <strong className="text-white font-medium">Renault</strong>, combined with a lifelong dedication to{' '}
+            <strong className="text-white font-medium">photorealistic lighting, vehicle shaders, and game aesthetics</strong>.
           </p>
         </div>
 
-        {/* CTAs */}
-        <div className="flex flex-wrap items-center gap-4 mb-16">
+        {/* Action Buttons */}
+        <div className="flex flex-wrap items-center gap-4 mb-20">
           <a
             href="#projects"
-            className="inline-flex items-center gap-3 px-7 py-4 rounded-xs bg-[#FF3E00] hover:bg-white text-black font-mono font-black text-xs uppercase tracking-widest shadow-xl shadow-[#FF3E00]/20 hover:scale-[1.02] active:scale-[0.98] transition-all"
+            className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-white text-black text-xs uppercase tracking-wider font-semibold hover:bg-zinc-200 transition-all"
           >
-            <span>EXPLORE WORK</span>
-            <ArrowRight className="w-4 h-4" />
+            <span>Explore Work</span>
+            <ArrowRight className="w-3.5 h-3.5" />
           </a>
 
           <a
             href="#cinematic-showcase"
-            className="inline-flex items-center gap-3 px-6 py-4 rounded-xs bg-zinc-900 hover:bg-zinc-800 text-white font-mono font-bold text-xs uppercase tracking-wider border border-white/10 hover:border-white/30 transition-all"
+            className="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-transparent text-white text-xs uppercase tracking-wider font-semibold border border-white/20 hover:border-white hover:bg-white/5 transition-all"
           >
-            <Gamepad2 className="w-4 h-4 text-[#FF3E00]" />
-            <span>3D & GAME ART SHOWCASE</span>
+            <span>3D &amp; Game Art</span>
           </a>
 
           <a
             href={personal.resumePdf}
             download
-            className="inline-flex items-center gap-2 px-5 py-4 rounded-xs text-zinc-400 hover:text-white font-mono text-xs uppercase tracking-wider transition-colors"
+            className="inline-flex items-center gap-1.5 px-4 py-3.5 text-xs uppercase tracking-wider font-medium text-zinc-400 hover:text-white transition-colors"
           >
-            <Download className="w-4 h-4 text-zinc-500" />
-            <span>DOWNLOAD CV (PDF)</span>
+            <span>Resume (PDF)</span>
+            <ArrowUpRight className="w-3.5 h-3.5 opacity-70" />
           </a>
         </div>
 
-        {/* Telemetry Stats Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {telemetryStats.map((stat, idx) => (
-            <div
-              key={idx}
-              className="relative p-5 rounded-xs bg-black/80 border border-white/10 hover:border-[#FF3E00]/50 transition-colors group"
-            >
-              <div className="absolute top-0 right-0 w-2 h-2 border-t-2 border-r-2 border-[#FF3E00] opacity-0 group-hover:opacity-100 transition-opacity" />
+        {/* Featured Visual Canvas (Porsche-Style Cinematic Banner) */}
+        <div className="relative aspect-[21/9] w-full rounded-xl overflow-hidden bg-zinc-950 border border-white/10 shadow-2xl mb-16 group">
+          <Image
+            src="/projects/vw-amarok-headlights.svg"
+            alt="Volkswagen Amarok 2024 Headlight Systems"
+            fill
+            priority
+            sizes="(max-width: 1200px) 100vw, 1200px"
+            className="object-cover transition-transform duration-700 group-hover:scale-102"
+          />
 
-              <div className="font-mono text-2xl sm:text-3xl font-black text-white tracking-tight mb-1 group-hover:text-[#FF3E00] transition-colors">
-                {stat.value}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent flex items-end p-6 sm:p-10">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between w-full gap-4">
+              <div>
+                <span className="text-[11px] uppercase tracking-widest font-medium text-zinc-400 block mb-1">
+                  Featured Case Study // Volkswagen OEM
+                </span>
+                <h3 className="text-xl sm:text-2xl font-semibold text-white tracking-tight">
+                  Amarok 2024: Optical Surfaces &amp; Headlights
+                </h3>
               </div>
-              <div className="font-mono text-xs font-bold text-zinc-400 uppercase tracking-wider mb-0.5">
-                {stat.label}
-              </div>
-              <div className="text-[11px] text-zinc-500 font-mono">
-                {stat.subtext}
-              </div>
+
+              <a
+                href="#projects"
+                className="text-xs uppercase tracking-wider font-semibold text-white hover:text-zinc-300 flex items-center gap-1.5"
+              >
+                <span>View Project</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </a>
             </div>
-          ))}
+          </div>
+        </div>
+
+        {/* Minimalist Key Metrics */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 border-t border-white/10">
+          <div>
+            <div className="text-2xl sm:text-3xl font-light text-white tracking-tight mb-1">
+              +5 Years
+            </div>
+            <div className="text-xs uppercase tracking-wider text-zinc-500 font-medium">
+              Automotive Surfacing
+            </div>
+          </div>
+
+          <div>
+            <div className="text-2xl sm:text-3xl font-light text-white tracking-tight mb-1">
+              Volkswagen &amp; Renault
+            </div>
+            <div className="text-xs uppercase tracking-wider text-zinc-500 font-medium">
+              OEM Serial Programs
+            </div>
+          </div>
+
+          <div>
+            <div className="text-2xl sm:text-3xl font-light text-white tracking-tight mb-1">
+              CATIA V5 &amp; Blender
+            </div>
+            <div className="text-xs uppercase tracking-wider text-zinc-500 font-medium">
+              Class-A CAD to Cycles
+            </div>
+          </div>
+
+          <div>
+            <div className="text-2xl sm:text-3xl font-light text-white tracking-tight mb-1">
+              Estudio 55
+            </div>
+            <div className="text-xs uppercase tracking-wider text-zinc-500 font-medium">
+              Furniture Design Atelier
+            </div>
+          </div>
         </div>
       </div>
     </section>

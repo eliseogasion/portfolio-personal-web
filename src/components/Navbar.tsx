@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { portfolioData } from '@/data/portfolioData';
-import { Menu, X, FileText, Send } from 'lucide-react';
+import { Menu, X, ArrowUpRight, FileText } from 'lucide-react';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -17,50 +17,41 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: '01 // WORK', href: '#projects' },
-    { label: '02 // 3D & GAME ART', href: '#cinematic-showcase' },
-    { label: '03 // ESTUDIO 55', href: '#estudio-55' },
-    { label: '04 // EXPERIENCE', href: '#experience' },
-    { label: '05 // SKILLS', href: '#skills' },
-    { label: '06 // CONTACT', href: '#contact' },
+    { label: 'Work', href: '#projects' },
+    { label: '3D Art', href: '#cinematic-showcase' },
+    { label: 'Estudio 55', href: '#estudio-55' },
+    { label: 'Experience', href: '#experience' },
+    { label: 'Skills', href: '#skills' },
+    { label: 'Contact', href: '#contact' },
   ];
 
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-200 ${
+      className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
         scrolled
-          ? 'bg-[#050507]/90 backdrop-blur-md border-b border-white/10 py-3 shadow-2xl shadow-black'
-          : 'bg-transparent py-5 border-b border-white/5'
+          ? 'bg-[#0B0B0D]/90 backdrop-blur-md border-b border-white/10 py-3.5 shadow-xl shadow-black/40'
+          : 'bg-transparent py-6'
       }`}
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-between">
         {/* Brand / Logo */}
         <a href="#" className="flex items-center gap-3 group">
-          <div className="w-8 h-8 rounded-xs bg-[#FF3E00] flex items-center justify-center font-mono font-black text-black text-xs tracking-tighter group-hover:bg-white transition-colors">
-            EG
-          </div>
-          <div>
-            <div className="flex items-center gap-2">
-              <span className="font-mono font-bold text-white tracking-tight text-sm uppercase group-hover:text-[#FF3E00] transition-colors">
-                {portfolioData.personal.name}
-              </span>
-              <span className="hidden sm:inline-block text-[9px] font-mono font-semibold px-2 py-0.5 rounded-xs bg-white/5 text-[#FF3E00] border border-[#FF3E00]/30 tracking-wider">
-                CLASS-A SURFACING & 3D ART
-              </span>
-            </div>
-            <p className="text-[10px] font-mono text-zinc-500 hidden sm:block">
-              CÓRDOBA, ARG // VW & RENAULT ALUM
-            </p>
-          </div>
+          <span className="text-base sm:text-lg font-bold text-white tracking-tight uppercase group-hover:text-zinc-300 transition-colors">
+            {portfolioData.personal.name}
+          </span>
+          <span className="hidden sm:inline-block w-[1px] h-3.5 bg-zinc-700" />
+          <span className="hidden sm:inline-block text-xs text-zinc-400 font-normal">
+            Automotive 3D &amp; Industrial Design
+          </span>
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-6">
+        <nav className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-xs font-mono font-medium text-zinc-400 hover:text-white hover:border-b border-[#FF3E00] pb-0.5 transition-colors tracking-wider"
+              className="text-xs uppercase tracking-wider text-zinc-400 hover:text-white transition-colors font-medium"
             >
               {link.label}
             </a>
@@ -68,27 +59,28 @@ export default function Navbar() {
         </nav>
 
         {/* Action Buttons */}
-        <div className="hidden sm:flex items-center gap-3">
+        <div className="hidden sm:flex items-center gap-4">
           <a
             href={portfolioData.personal.resumePdf}
             download
-            className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono font-semibold text-zinc-300 bg-zinc-900 border border-zinc-700/80 hover:border-white hover:text-white rounded-xs transition-all"
+            className="text-xs uppercase tracking-wider font-medium text-zinc-300 hover:text-white flex items-center gap-1.5 transition-colors"
           >
-            <FileText className="w-3.5 h-3.5 text-[#FF3E00]" />
-            <span>RESUME (PDF)</span>
+            <span>Resume</span>
+            <ArrowUpRight className="w-3.5 h-3.5 opacity-70" />
           </a>
+
           <a
             href="#contact"
-            className="flex items-center gap-1.5 px-4 py-1.5 text-xs font-mono font-bold text-black bg-[#FF3E00] hover:bg-white rounded-xs transition-all tracking-wider shadow-sm shadow-[#FF3E00]/30"
+            className="px-4 py-2 rounded-full text-xs font-semibold text-white bg-white/10 hover:bg-white hover:text-black border border-white/20 transition-all"
           >
-            <span>GET IN TOUCH</span>
+            Get in Touch
           </a>
         </div>
 
         {/* Mobile menu button */}
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          className="p-2 text-zinc-400 hover:text-white lg:hidden rounded-xs bg-zinc-900 border border-zinc-800"
+          className="p-2 text-zinc-300 hover:text-white md:hidden"
           aria-label="Toggle navigation menu"
         >
           {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -97,32 +89,32 @@ export default function Navbar() {
 
       {/* Mobile dropdown */}
       {mobileMenuOpen && (
-        <div className="lg:hidden bg-[#050507]/98 backdrop-blur-xl border-b border-white/10 px-6 py-5 space-y-3 mt-2">
+        <div className="md:hidden bg-[#0B0B0D]/98 backdrop-blur-2xl border-b border-white/10 px-8 py-6 space-y-4">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               onClick={() => setMobileMenuOpen(false)}
-              className="block text-xs font-mono font-medium text-zinc-300 hover:text-[#FF3E00] py-2 border-b border-white/5"
+              className="block text-sm uppercase tracking-wider text-zinc-300 hover:text-white py-1.5"
             >
               {link.label}
             </a>
           ))}
-          <div className="pt-3 flex flex-col gap-2">
+          <div className="pt-4 border-t border-white/10 flex flex-col gap-3">
             <a
               href={portfolioData.personal.resumePdf}
               download
-              className="flex items-center justify-center gap-2 py-2.5 text-xs font-mono font-semibold text-zinc-300 bg-zinc-900 rounded-xs border border-zinc-800"
+              className="flex items-center justify-center gap-2 py-3 rounded-full text-xs font-medium text-zinc-300 bg-zinc-900 border border-white/10 uppercase tracking-wider"
             >
-              <FileText className="w-4 h-4 text-[#FF3E00]" />
-              DOWNLOAD RESUME (PDF)
+              <FileText className="w-4 h-4" />
+              Download Resume (PDF)
             </a>
             <a
               href="#contact"
               onClick={() => setMobileMenuOpen(false)}
-              className="flex items-center justify-center gap-2 py-2.5 text-xs font-mono font-bold text-black bg-[#FF3E00] rounded-xs"
+              className="flex items-center justify-center py-3 rounded-full text-xs font-semibold text-black bg-white uppercase tracking-wider"
             >
-              CONTACT // DISPATCH
+              Get in Touch
             </a>
           </div>
         </div>

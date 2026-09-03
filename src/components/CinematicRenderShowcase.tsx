@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { portfolioData } from '@/data/portfolioData';
-import { Flame, Check, Wrench, Shield, ArrowUpRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 
 export default function CinematicRenderShowcase() {
   const hypercarProject =
@@ -11,97 +11,88 @@ export default function CinematicRenderShowcase() {
     portfolioData.projects[2];
 
   return (
-    <section id="cinematic-showcase" className="py-24 bg-[#08080c] relative overflow-hidden border-y border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Telemetry Header */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+    <section id="cinematic-showcase" className="py-24 md:py-32 bg-[#0E0E11] border-y border-white/5">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
           <div>
-            <div className="flex items-center gap-2 font-mono text-xs font-bold text-[#FF3E00] uppercase tracking-widest mb-2">
-              <span className="w-1.5 h-1.5 bg-[#FF3E00] rounded-full" />
-              <span>02 // CINEMATIC & GAME ART SHOWCASE</span>
+            <div className="flex items-center gap-2.5 mb-2">
+              <span className="w-2 h-2 rounded-full bg-[#D5001C]" />
+              <span className="text-xs uppercase tracking-[0.2em] font-medium text-zinc-400">
+                Art Direction &amp; Rendering
+              </span>
             </div>
-            <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight uppercase">
-              WHERE TECHNICAL RIGOR MEETS VISUAL STORYTELLING
+            <h2 className="text-3xl sm:text-5xl font-bold text-white tracking-tight">
+              Where technical form meets visual art.
             </h2>
           </div>
 
-          <div className="font-mono text-xs text-zinc-500 max-w-sm">
-            [FOCUS]: Crafting high-impact promotional renders, cinematic lighting rigs, and marketing key art for gaming platforms and digital storefronts.
-          </div>
+          <p className="text-sm text-zinc-400 max-w-md font-light leading-relaxed">
+            Translating mathematical curvature and aerodynamic volume into high-impact visual storytelling for games and automotive marketing.
+          </p>
         </div>
 
-        {/* Monolithic Showcase Box */}
-        <div className="rounded-xs bg-black border border-white/15 p-6 sm:p-10 shadow-2xl relative">
-          <div className="absolute -top-[1px] left-10 px-3 py-0.5 bg-[#FF3E00] text-black font-mono text-[9px] font-black uppercase tracking-wider">
-            AUTOMOTIVE ART & MARKETING KEY VISUAL
-          </div>
+        {/* Editorial Split Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          {/* Visual Showcase */}
+          <div className="lg:col-span-7">
+            <div className="relative aspect-video rounded-xl overflow-hidden bg-black border border-white/10 shadow-2xl group">
+              <Image
+                src={hypercarProject.heroImage}
+                alt={hypercarProject.title}
+                fill
+                sizes="(max-width: 1024px) 100vw, 700px"
+                className="object-cover transition-transform duration-700 group-hover:scale-103"
+              />
 
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            {/* Visual Canvas */}
-            <div className="lg:col-span-7">
-              <div className="relative aspect-video rounded-xs overflow-hidden border border-white/20 bg-zinc-950 group">
-                <Image
-                  src={hypercarProject.heroImage}
-                  alt={hypercarProject.title}
-                  fill
-                  sizes="(max-width: 1024px) 100vw, 700px"
-                  className="object-cover transition-transform duration-700 group-hover:scale-105"
-                />
-
-                <div className="absolute top-3 left-3 bg-black/85 backdrop-blur-md px-2.5 py-1 border border-white/10 font-mono text-[10px] text-zinc-300">
-                  <span className="text-[#FF3E00] font-bold">16:9</span> // KEY VISUAL RATIO
-                </div>
-
-                <div className="absolute bottom-3 right-3 bg-black/85 backdrop-blur-md px-2.5 py-1 border border-white/10 font-mono text-[10px] text-zinc-400">
-                  BLENDER CYCLES + PHOTOSHOP
-                </div>
+              <div className="absolute top-4 left-4">
+                <span className="text-[11px] uppercase tracking-wider font-medium px-3 py-1 rounded-full bg-black/80 backdrop-blur-md text-white border border-white/10">
+                  16:9 Marketing Key Art
+                </span>
               </div>
             </div>
+          </div>
 
-            {/* Technical Case Study Specs */}
-            <div className="lg:col-span-5 space-y-6">
-              <div>
-                <span className="font-mono text-xs text-[#FF3E00] font-bold uppercase tracking-wider">
-                  THE ARTISTIC ADVANTAGE
-                </span>
-                <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight uppercase mt-1 mb-3">
-                  Why Real Automotive CAD Elevates Game Rendering
-                </h3>
-                <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
-                  Lighting a vehicle is not about random spotlights—it is about sculpting form. Having modeled headlights for <strong className="text-white">Volkswagen</strong> and aerodynamic body panels for <strong className="text-white">Renault</strong>, I understand how photons bounce across curvature-continuous sheets of metal, where the eye naturally travels, and how to command immediate visual engagement.
-                </p>
+          {/* Conceptual Narrative */}
+          <div className="lg:col-span-5 space-y-8">
+            <div>
+              <span className="text-xs uppercase tracking-widest font-medium text-zinc-500 block mb-2">
+                Philosophy
+              </span>
+              <h3 className="text-2xl font-semibold text-white tracking-tight mb-3">
+                Why real-world CAD matters in 3D rendering
+              </h3>
+              <p className="text-sm text-zinc-300 font-light leading-relaxed">
+                Lighting a vehicle is not about adding generic spotlights—it is about carving aerodynamic character. Having designed real exterior surfaces for Volkswagen and Renault, I know how light travels across sheet metal, where reflection lines break, and how to command immediate emotional focus.
+              </p>
+            </div>
+
+            {/* Core Pillars */}
+            <div className="space-y-4 text-sm font-light text-zinc-300">
+              <div className="p-4 rounded-lg bg-white/5 border border-white/5">
+                <div className="font-semibold text-white mb-1">
+                  Physically Calibrated PBR Shaders
+                </div>
+                <div className="text-xs text-zinc-400 leading-relaxed font-normal">
+                  Authentic clearcoat depth, metallic flakes, carbon weave, and tire rubber wear calibrated for realistic light response.
+                </div>
               </div>
 
-              {/* Technical Points */}
-              <div className="space-y-2.5 font-mono">
-                <div className="p-3 bg-zinc-900/60 border border-white/5 flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 bg-[#FF3E00] mt-1 flex-shrink-0" />
-                  <div>
-                    <div className="text-xs font-bold text-white uppercase">PBR MULTI-LAYER SHADERS</div>
-                    <div className="text-[11px] text-zinc-400 font-sans mt-0.5">
-                      Realistic clearcoat depth, metallic flakes, anisotropic brake discs, and authentic tire rubber wear.
-                    </div>
-                  </div>
+              <div className="p-4 rounded-lg bg-white/5 border border-white/5">
+                <div className="font-semibold text-white mb-1">
+                  Cinematic Camera &amp; Framing
                 </div>
-
-                <div className="p-3 bg-zinc-900/60 border border-white/5 flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 bg-[#FF3E00] mt-1 flex-shrink-0" />
-                  <div>
-                    <div className="text-xs font-bold text-white uppercase">HIGH-CTR MARKETING COMPOSITION</div>
-                    <div className="text-[11px] text-zinc-400 font-sans mt-0.5">
-                      Dynamic Dutch angles, rim lighting, and focal depth calibrated to pop on both mobile feeds and 4K displays.
-                    </div>
-                  </div>
+                <div className="text-xs text-zinc-400 leading-relaxed font-normal">
+                  Dynamic low-angle lenses, rim lighting, and focal depth engineered to pop on mobile storefronts and 4K displays.
                 </div>
+              </div>
 
-                <div className="p-3 bg-zinc-900/60 border border-white/5 flex items-start gap-3">
-                  <div className="w-1.5 h-1.5 bg-[#FF3E00] mt-1 flex-shrink-0" />
-                  <div>
-                    <div className="text-xs font-bold text-white uppercase">RAPID PRODUCTION PIPELINE</div>
-                    <div className="text-[11px] text-zinc-400 font-sans mt-0.5">
-                      Streamlined workflow between Blender, game engines (Roblox Studio), and Adobe Suite for fast-paced iteration.
-                    </div>
-                  </div>
+              <div className="p-4 rounded-lg bg-white/5 border border-white/5">
+                <div className="font-semibold text-white mb-1">
+                  Speed &amp; Rapid Production
+                </div>
+                <div className="text-xs text-zinc-400 leading-relaxed font-normal">
+                  Streamlined pipeline between Blender, game engines (Roblox Studio), and Adobe Suite for rapid turnaround cycles.
                 </div>
               </div>
             </div>
