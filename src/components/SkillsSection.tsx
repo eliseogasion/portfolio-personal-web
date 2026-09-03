@@ -2,67 +2,68 @@
 
 import React from 'react';
 import { portfolioData } from '@/data/portfolioData';
-import { Cpu, Wrench, Check, Sparkles } from 'lucide-react';
+import { Terminal, Cpu, Check } from 'lucide-react';
 
 export default function SkillsSection() {
   const { skillCategories } = portfolioData;
 
   return (
-    <section id="skills" className="py-20 md:py-28 bg-zinc-950/40 relative border-t border-zinc-800/60">
+    <section id="skills" className="py-24 bg-[#08080c] border-t border-white/10 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-3xl mb-14">
-          <div className="inline-flex items-center gap-2 text-xs font-bold text-sky-400 uppercase tracking-widest mb-3">
-            <Cpu className="w-4 h-4" />
-            <span>Stack Técnico & Capacidades</span>
+        {/* Section Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+          <div>
+            <div className="flex items-center gap-2 font-mono text-xs font-bold text-[#FF3E00] uppercase tracking-widest mb-2">
+              <span className="w-1.5 h-1.5 bg-[#FF3E00] rounded-full" />
+              <span>04 // STACK TÉCNICO & CAD INDUSTRIAL</span>
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight uppercase">
+              CAPACIDADES & DOMINIO DE SOFTWARE
+            </h2>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-white tracking-tight mb-4">
-            Herramientas & Habilidades Clave
-          </h2>
-          <p className="text-sm sm:text-base text-zinc-400 leading-relaxed">
-            Alineadas con los requerimientos exactos del rol de <strong className="text-white">Render Artist</strong>:
-            dominio de Blender, Roblox Studio, suite de Adobe y comprensión profunda de geometría 3D y materiales.
-          </p>
+
+          <div className="font-mono text-xs text-zinc-400 max-w-sm leading-relaxed">
+            Intersección entre el software de ingeniería automotriz de alta gama (CATIA V5) y las herramientas de renderizado digital para gaming (Blender, Roblox Studio, Photoshop).
+          </div>
         </div>
 
-        {/* 3-Column Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {/* 3-Column Telemetry Matrix */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 font-mono">
           {skillCategories.map((category, idx) => (
             <div
               key={idx}
-              className="p-6 rounded-2xl bg-zinc-900/60 border border-zinc-800/80 flex flex-col justify-between"
+              className="p-6 bg-black border border-white/10 flex flex-col justify-between"
             >
               <div>
-                <h3 className="text-lg font-bold text-white tracking-tight mb-5 pb-3 border-b border-zinc-800 flex items-center justify-between">
-                  <span>{category.title}</span>
-                  <span className="w-2 h-2 rounded-full bg-sky-400" />
+                <div className="flex items-center justify-between pb-3 mb-5 border-b border-white/10">
+                  <span className="text-xs font-black text-[#FF3E00] uppercase tracking-wider">
+                    {category.code}
+                  </span>
+                  <span className="w-1.5 h-1.5 bg-[#FF3E00]" />
+                </div>
+
+                <h3 className="text-base font-bold text-white uppercase tracking-tight mb-5">
+                  {category.title}
                 </h3>
 
-                <div className="space-y-3">
+                <div className="space-y-2.5">
                   {category.skills.map((skill, sIdx) => (
                     <div
                       key={sIdx}
-                      className={`p-3 rounded-xl border flex items-center justify-between transition-colors ${
+                      className={`p-3 border flex items-center justify-between text-xs transition-colors ${
                         skill.featured
-                          ? 'bg-sky-500/5 border-sky-500/30'
-                          : 'bg-zinc-950/40 border-zinc-800/60'
+                          ? 'bg-zinc-900/90 border-[#FF3E00]/40 text-white'
+                          : 'bg-zinc-950/50 border-white/5 text-zinc-400'
                       }`}
                     >
                       <div className="flex items-center gap-2">
-                        <Check
-                          className={`w-4 h-4 ${
-                            skill.featured ? 'text-sky-400 font-bold' : 'text-zinc-500'
-                          }`}
-                        />
-                        <span
-                          className={`text-xs font-semibold ${
-                            skill.featured ? 'text-white' : 'text-zinc-300'
-                          }`}
-                        >
-                          {skill.name}
+                        <span className={skill.featured ? 'text-[#FF3E00]' : 'text-zinc-600'}>
+                          ►
                         </span>
+                        <span className="font-semibold uppercase">{skill.name}</span>
                       </div>
 
-                      <span className="text-[11px] text-zinc-400 font-medium bg-zinc-800/80 px-2 py-0.5 rounded">
+                      <span className="text-[10px] text-zinc-500 font-bold">
                         {skill.level}
                       </span>
                     </div>
@@ -70,8 +71,8 @@ export default function SkillsSection() {
                 </div>
               </div>
 
-              <div className="pt-6 mt-6 border-t border-zinc-800/60 text-[11px] text-zinc-500 text-center">
-                Optimizado para entregas rápidas e iteración continua
+              <div className="pt-5 mt-6 border-t border-white/5 text-[10px] text-zinc-600 uppercase text-center">
+                // SPEC VERIFIED
               </div>
             </div>
           ))}

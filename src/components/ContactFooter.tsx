@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import { portfolioData } from '@/data/portfolioData';
-import { Mail, Copy, Check, ExternalLink, FileText, ArrowUp, Send } from 'lucide-react';
+import { Mail, Copy, Check, ExternalLink, FileText, ArrowUp, Phone, MapPin } from 'lucide-react';
 
 export default function ContactFooter() {
   const { personal } = portfolioData;
@@ -19,105 +19,115 @@ export default function ContactFooter() {
   };
 
   return (
-    <footer id="contacto" className="pt-20 pb-12 bg-zinc-950 border-t border-zinc-800 relative overflow-hidden">
-      {/* Ambient background glow */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[300px] bg-sky-500/10 blur-[160px] rounded-full pointer-events-none" />
+    <footer id="contacto" className="pt-24 pb-12 bg-[#050507] border-t border-white/10 relative overflow-hidden">
+      {/* Background orange tach glow */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[800px] h-[300px] bg-[#FF3E00]/10 blur-[180px] rounded-full pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Contact Banner */}
-        <div className="p-8 sm:p-12 md:p-16 rounded-3xl bg-gradient-to-b from-zinc-900/90 to-zinc-950 border border-zinc-800 text-center max-w-4xl mx-auto mb-16 shadow-2xl">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-bold uppercase tracking-wider mb-6">
-            <Send className="w-3.5 h-3.5" />
-            <span>Disponible para Oportunidades & Voldex</span>
+        {/* Contact Monolithic Banner */}
+        <div className="p-8 sm:p-14 bg-black border border-white/15 max-w-4xl mx-auto mb-20 shadow-2xl relative">
+          <div className="absolute -top-[1px] left-10 px-3 py-0.5 bg-[#FF3E00] text-black font-mono text-[9px] font-black uppercase tracking-wider">
+            COMMUNICATION DISPATCH // ACTIVE
           </div>
 
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight mb-4">
-            ¿Listo para llevar los visuales de Driving Empire al siguiente nivel?
-          </h2>
+          <div className="text-center">
+            <div className="font-mono text-xs text-[#FF3E00] font-bold uppercase tracking-widest mb-3">
+              05 // DISPONIBILIDAD INMEDIATA PARA VOLDEX & DRIVING EMPIRE
+            </div>
 
-          <p className="text-sm sm:text-base text-zinc-300 max-w-2xl mx-auto mb-8 leading-relaxed">
-            Hablemos sobre cómo mi experiencia en <strong className="text-white">Estudio 55</strong> y especialización en renders
-            3D de vehículos pueden integrarse a su pipeline de arte y marketing.
-          </p>
+            <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight uppercase mb-4 leading-tight">
+              ¿CONECTAMOS PARA TRANSFORMAR LOS VISUALES DE DRIVING EMPIRE?
+            </h2>
 
-          {/* Email & Actions */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-md mx-auto mb-8">
-            <a
-              href={`mailto:${personal.email}`}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-sky-400 hover:bg-sky-300 text-zinc-950 font-bold text-sm shadow-lg shadow-sky-500/20 transition-all hover:scale-[1.02]"
-            >
-              <Mail className="w-4 h-4" />
-              <span>Enviar Correo</span>
-            </a>
+            <p className="text-xs sm:text-sm text-zinc-400 max-w-2xl mx-auto mb-8 font-mono leading-relaxed">
+              Combinemos la experiencia real de diseño automotriz OEM con el dinamismo del marketing en Roblox.
+              Resido en Córdoba, Argentina y estoy 100% disponible para puestos remotos de tiempo completo.
+            </p>
 
-            <button
-              onClick={copyEmail}
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3.5 rounded-xl bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-700 font-semibold text-sm transition-all"
-            >
-              {copied ? (
-                <>
-                  <Check className="w-4 h-4 text-emerald-400" />
-                  <span className="text-emerald-400">¡Copiado al portapapeles!</span>
-                </>
-              ) : (
-                <>
-                  <Copy className="w-4 h-4" />
-                  <span>Copiar {personal.email}</span>
-                </>
-              )}
-            </button>
-          </div>
+            {/* Direct Contact Buttons */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 max-w-lg mx-auto mb-8 font-mono">
+              <a
+                href={`mailto:${personal.email}`}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-4 bg-[#FF3E00] hover:bg-white text-black font-black text-xs uppercase tracking-wider transition-all"
+              >
+                <Mail className="w-4 h-4" />
+                <span>ENVIAR CORREO</span>
+              </a>
 
-          {/* CV Direct Download */}
-          <div className="text-xs text-zinc-400 flex items-center justify-center gap-2">
-            <span>¿Querés ver el currículum completo?</span>
-            <a
-              href={personal.resumePdf}
-              download
-              className="text-sky-400 hover:underline font-semibold flex items-center gap-1"
-            >
-              <FileText className="w-3.5 h-3.5" />
-              Descargar CV en PDF
-            </a>
+              <button
+                onClick={copyEmail}
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-4 bg-zinc-900 hover:bg-zinc-800 text-zinc-300 border border-white/10 font-bold text-xs uppercase tracking-wider transition-all"
+              >
+                {copied ? (
+                  <>
+                    <Check className="w-4 h-4 text-[#FF3E00]" />
+                    <span className="text-[#FF3E00]">¡COPIADO!</span>
+                  </>
+                ) : (
+                  <>
+                    <Copy className="w-4 h-4" />
+                    <span>COPIAR {personal.email}</span>
+                  </>
+                )}
+              </button>
+            </div>
+
+            {/* Direct Phone & CV */}
+            <div className="flex flex-wrap items-center justify-center gap-6 font-mono text-xs text-zinc-400">
+              <div className="flex items-center gap-2">
+                <Phone className="w-3.5 h-3.5 text-[#FF3E00]" />
+                <span className="text-white font-bold">{personal.phone}</span>
+              </div>
+
+              <div className="flex items-center gap-2">
+                <MapPin className="w-3.5 h-3.5 text-[#FF3E00]" />
+                <span>{personal.location}</span>
+              </div>
+
+              <a
+                href={personal.resumePdf}
+                download
+                className="text-[#FF3E00] hover:underline font-bold flex items-center gap-1.5"
+              >
+                <FileText className="w-3.5 h-3.5" />
+                <span>DESCARGAR CV COMPLETO</span>
+              </a>
+            </div>
           </div>
         </div>
 
-        {/* Social Links & Copyright */}
-        <div className="pt-8 border-t border-zinc-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-400">
-          <div className="flex items-center gap-2">
-            <span className="font-bold text-white tracking-tight">{personal.name}</span>
-            <span>•</span>
-            <span className="text-zinc-400">{personal.currentStudio}</span>
-            <span>•</span>
-            <span>{personal.location}</span>
+        {/* Bottom Telemetry Bar */}
+        <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 font-mono text-xs text-zinc-500">
+          <div>
+            <span className="text-white font-bold uppercase">{personal.name}</span> // INDUSTRIAL DESIGNER & AUTOMOTIVE 3D
           </div>
 
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-6">
             <a
               href={personal.linkedin}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-white transition-colors flex items-center gap-1.5"
+              className="text-zinc-400 hover:text-[#FF3E00] transition-colors flex items-center gap-1.5 uppercase"
             >
-              <svg className="w-3.5 h-3.5 fill-sky-400" viewBox="0 0 24 24">
-                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.25c-.9 0-1.63.73-1.63 1.63s.73 1.63 1.63 1.63 1.63-.73 1.63-1.63-.73-1.63-1.63-1.63Z" />
+              <svg className="w-3.5 h-3.5 fill-current" viewBox="0 0 24 24">
+                <path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.2V10.9H6.46M7.83 6.25c-.9 0-1.63.73-1.63 1.63s.73 1.63 1.63 1.63-.73 1.63-1.63-1.63Z" />
               </svg>
-              <span>LinkedIn</span>
+              <span>LINKEDIN</span>
             </a>
 
             <a
               href={personal.artstation}
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-white transition-colors flex items-center gap-1"
+              className="text-zinc-400 hover:text-[#FF3E00] transition-colors flex items-center gap-1 uppercase"
             >
-              <ExternalLink className="w-3.5 h-3.5 text-sky-400" />
-              <span>ArtStation</span>
+              <ExternalLink className="w-3.5 h-3.5" />
+              <span>ARTSTATION</span>
             </a>
 
             <button
               onClick={scrollToTop}
-              className="p-2 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-white border border-zinc-800 transition-colors ml-2 cursor-pointer"
+              className="p-2 bg-zinc-900 hover:bg-[#FF3E00] text-zinc-400 hover:text-black border border-white/10 transition-colors ml-2 cursor-pointer"
               title="Volver arriba"
             >
               <ArrowUp className="w-4 h-4" />

@@ -1,8 +1,10 @@
 @import "tailwindcss";
 
 :root {
-  --background: #09090b;
+  --background: #050507;
   --foreground: #f4f4f5;
+  --accent-orange: #FF3E00;
+  --accent-titanium: #1e1e24;
 }
 
 html {
@@ -11,30 +13,41 @@ html {
 }
 
 body {
-  background-color: #09090b;
+  background-color: #050507;
   color: #f4f4f5;
   font-family: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   overflow-x: hidden;
-  selection-background-color: #38bdf8;
-  selection-color: #000000;
 }
 
 ::selection {
-  background: #0284c7;
-  color: #ffffff;
+  background: #FF3E00;
+  color: #000000;
 }
 
-/* Custom sleek dark scrollbar */
+/* Blueprint CAD grid background pattern */
+.bg-cad-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+}
+
+.bg-cad-dots {
+  background-size: 24px 24px;
+  background-image: radial-gradient(rgba(255, 62, 0, 0.15) 1px, transparent 0);
+}
+
+/* Custom sleek technical dark scrollbar */
 ::-webkit-scrollbar {
-  width: 8px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: #09090b;
+  background: #050507;
 }
 ::-webkit-scrollbar-thumb {
-  background: #27272a;
-  border-radius: 9999px;
+  background: #27272f;
+  border-radius: 2px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #3f3f46;
+  background: #FF3E00;
 }

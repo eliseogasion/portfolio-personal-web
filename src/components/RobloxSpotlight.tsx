@@ -3,118 +3,110 @@
 import React from 'react';
 import Image from 'next/image';
 import { portfolioData } from '@/data/portfolioData';
-import { Gamepad2, Sparkles, CheckCircle2, Zap, ArrowUpRight, Flame } from 'lucide-react';
+import { Flame, Check, Wrench, Shield, ArrowUpRight } from 'lucide-react';
 
-interface RobloxSpotlightProps {
-  onOpenProject?: (projectId: string) => void;
-}
-
-export default function RobloxSpotlight({ onOpenProject }: RobloxSpotlightProps) {
+export default function RobloxSpotlight() {
   const robloxProject =
-    portfolioData.projects.find((p) => p.id === 'driving-empire-hypercar') ||
-    portfolioData.projects.find((p) => p.category === 'roblox');
+    portfolioData.projects.find((p) => p.id === 'driving-empire-hypercar-showcase') ||
+    portfolioData.projects[2];
 
   return (
-    <section id="roblox-spotlight" className="py-20 bg-zinc-950/60 relative overflow-hidden border-y border-zinc-800/60">
-      {/* Background ambient neon glow */}
-      <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] bg-sky-500/10 blur-[150px] rounded-full pointer-events-none -z-10" />
-      <div className="absolute bottom-10 right-1/4 w-[400px] h-[400px] bg-blue-600/10 blur-[150px] rounded-full pointer-events-none -z-10" />
-
+    <section id="roblox-spotlight" className="py-24 bg-[#08080c] relative overflow-hidden border-y border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <div className="text-center max-w-3xl mx-auto mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-500/10 border border-sky-500/20 text-sky-400 text-xs font-bold uppercase tracking-wider mb-4">
-            <Flame className="w-3.5 h-3.5 text-amber-400" />
-            <span>Foco en Voldex & Driving Empire</span>
+        {/* Section Telemetry Header */}
+        <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+          <div>
+            <div className="flex items-center gap-2 font-mono text-xs font-bold text-[#FF3E00] uppercase tracking-widest mb-2">
+              <span className="w-1.5 h-1.5 bg-[#FF3E00] rounded-full" />
+              <span>02 // TARGET CASE STUDY: DRIVING EMPIRE</span>
+            </div>
+            <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight uppercase">
+              DE LA INGENIERÍA OEM AL MARKETING EN ROBLOX
+            </h2>
           </div>
-          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white tracking-tight leading-tight mb-4">
-            Roblox Game & Marketing Art
-          </h2>
-          <p className="text-sm sm:text-base text-zinc-400 leading-relaxed">
-            Diseñado para captar la atención de millones de jugadores. El flujo combina la precisión formal del diseño industrial
-            con la composición dinámica y el alto contraste que exige el feed de Roblox.
-          </p>
+
+          <div className="font-mono text-xs text-zinc-500 max-w-sm">
+            [OBJECTIVE]: Renders comerciales y miniaturas de alto impacto que impulsan el CTR de Driving Empire en el feed de Roblox.
+          </div>
         </div>
 
-        {/* Feature Spotlight Card */}
-        <div className="relative rounded-3xl bg-gradient-to-b from-zinc-900/90 to-zinc-950 border border-zinc-800 p-6 sm:p-8 lg:p-10 shadow-2xl overflow-hidden">
+        {/* Monolithic Showcase Box */}
+        <div className="rounded-xs bg-black border border-white/15 p-6 sm:p-10 shadow-2xl relative">
+          {/* Top Notch Decorative Marker */}
+          <div className="absolute -top-[1px] left-10 px-3 py-0.5 bg-[#FF3E00] text-black font-mono text-[9px] font-black uppercase tracking-wider">
+            DRIVING EMPIRE ASSET CONCEPT
+          </div>
+
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            {/* Left: Render Image Showcase */}
+            {/* Visual Canvas */}
             <div className="lg:col-span-7">
-              <div className="relative aspect-video rounded-2xl overflow-hidden border border-zinc-700/80 shadow-2xl bg-zinc-950 group">
+              <div className="relative aspect-video rounded-xs overflow-hidden border border-white/20 bg-zinc-950 group">
                 <Image
-                  src={robloxProject ? robloxProject.heroImage : '/projects/roblox-driving-empire-hero.svg'}
-                  alt="Roblox Driving Empire Render Showcase"
+                  src={robloxProject.heroImage}
+                  alt={robloxProject.title}
                   fill
-                  sizes="(max-width: 1024px) 100vw, 650px"
+                  sizes="(max-width: 1024px) 100vw, 700px"
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
-                <div className="absolute top-3 left-3 flex items-center gap-2">
-                  <span className="text-xs font-bold px-3 py-1 rounded-full bg-zinc-950/85 backdrop-blur-md text-sky-400 border border-sky-500/30">
-                    16:9 Marketing Aspect Ratio
-                  </span>
+
+                {/* Telemetry Overlay Tag */}
+                <div className="absolute top-3 left-3 bg-black/85 backdrop-blur-md px-2.5 py-1 border border-white/10 font-mono text-[10px] text-zinc-300">
+                  <span className="text-[#FF3E00] font-bold">16:9</span> // THUMBNAIL ASPECT
+                </div>
+
+                <div className="absolute bottom-3 right-3 bg-black/85 backdrop-blur-md px-2.5 py-1 border border-white/10 font-mono text-[10px] text-zinc-400">
+                  BLENDER CYCLES + PHOTOSHOP
                 </div>
               </div>
             </div>
 
-            {/* Right: Technical Points for Voldex Art Lead */}
+            {/* Technical Case Study Specs */}
             <div className="lg:col-span-5 space-y-6">
               <div>
-                <span className="text-xs font-bold text-sky-400 uppercase tracking-wider">
-                  Pipeline & Adaptación
+                <span className="font-mono text-xs text-[#FF3E00] font-bold uppercase tracking-wider">
+                  EL DIFERENCIAL CLAVE
                 </span>
-                <h3 className="text-2xl font-black text-white tracking-tight mt-1 mb-3">
-                  ¿Por qué este enfoque funciona para Driving Empire?
+                <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight uppercase mt-1 mb-3">
+                  ¿Por qué un Diseñador Industrial automotriz en Voldex?
                 </h3>
-                <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed">
-                  Para destacar en la plataforma, un render de auto necesita comunicar velocidad, prestigio y fidelidad estética
-                  en fracciones de segundo sobre pantallas de todos los tamaños.
+                <p className="text-xs sm:text-sm text-zinc-400 leading-relaxed">
+                  Para que un auto impacte en una miniatura de Roblox, no basta con tirar luces aleatorias. 
+                  Haber modelado faros para <strong className="text-white">Volkswagen</strong> y paneles para{' '}
+                  <strong className="text-white">Renault</strong> me da el conocimiento exacto de cómo rebotan los brillos en las curvas de chapa, cómo se leen las tomas de aire y cómo generar sensación de velocidad.
                 </p>
               </div>
 
-              {/* Pillars */}
-              <div className="space-y-3">
-                <div className="p-3.5 rounded-xl bg-zinc-900/80 border border-zinc-800 flex items-start gap-3">
-                  <CheckCircle2 className="w-4 h-4 text-sky-400 flex-shrink-0 mt-0.5" />
+              {/* Technical Points */}
+              <div className="space-y-2.5 font-mono">
+                <div className="p-3 bg-zinc-900/60 border border-white/5 flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-[#FF3E00] mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="text-xs font-bold text-white mb-0.5">Iluminación Automotriz Dramática</h4>
-                    <p className="text-[11px] text-zinc-400 leading-normal">
-                      Luces de silueta (rim lights) para recortar la carrocería sobre fondos oscuros o urbanos.
-                    </p>
+                    <div className="text-xs font-bold text-white uppercase">SHADING MULTICAPA & CLEARCOAT</div>
+                    <div className="text-[11px] text-zinc-400 font-sans mt-0.5">
+                      Pintura automotriz con flake reflectivo, textura de neumáticos y pinzas de freno en alto contraste.
+                    </div>
                   </div>
                 </div>
 
-                <div className="p-3.5 rounded-xl bg-zinc-900/80 border border-zinc-800 flex items-start gap-3">
-                  <CheckCircle2 className="w-4 h-4 text-sky-400 flex-shrink-0 mt-0.5" />
+                <div className="p-3 bg-zinc-900/60 border border-white/5 flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-[#FF3E00] mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="text-xs font-bold text-white mb-0.5">Shading PBR & Reflejos Realistas</h4>
-                    <p className="text-[11px] text-zinc-400 leading-normal">
-                      Pintura multicapa, laca transparente, fibra de carbono y detalles metálicos en llantas.
-                    </p>
+                    <div className="text-xs font-bold text-white uppercase">COMPOSICIÓN DINÁMICA DE ALTO CTR</div>
+                    <div className="text-[11px] text-zinc-400 font-sans mt-0.5">
+                      Cámaras angulares que transmiten agresión visual instantánea en pantallas de PC y dispositivos móviles.
+                    </div>
                   </div>
                 </div>
 
-                <div className="p-3.5 rounded-xl bg-zinc-900/80 border border-zinc-800 flex items-start gap-3">
-                  <CheckCircle2 className="w-4 h-4 text-sky-400 flex-shrink-0 mt-0.5" />
+                <div className="p-3 bg-zinc-900/60 border border-white/5 flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-[#FF3E00] mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="text-xs font-bold text-white mb-0.5">Velocidad en Entrega & Postproducción</h4>
-                    <p className="text-[11px] text-zinc-400 leading-normal">
-                      Flujo optimizado en Blender y Photoshop para responder con agilidad a eventos y nuevos vehículos.
-                    </p>
+                    <div className="text-xs font-bold text-white uppercase">PIPELINE RÁPIDO PARA LIVE-OPS</div>
+                    <div className="text-[11px] text-zinc-400 font-sans mt-0.5">
+                      Flujo ágil en Blender y Photoshop para entregas semanales de nuevos autos y eventos.
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              {/* Tools Badges */}
-              <div className="pt-2 flex flex-wrap gap-2">
-                {['Blender 4.x', 'Roblox Studio', 'Adobe Photoshop', 'Adobe Premiere Pro'].map((tool, i) => (
-                  <span
-                    key={i}
-                    className="text-xs font-semibold px-3 py-1 rounded-lg bg-zinc-800 text-zinc-200 border border-zinc-700"
-                  >
-                    {tool}
-                  </span>
-                ))}
               </div>
             </div>
           </div>
