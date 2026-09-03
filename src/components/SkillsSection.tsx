@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { portfolioData } from '@/data/portfolioData';
-import { Terminal, Cpu, Check } from 'lucide-react';
 
 export default function SkillsSection() {
   const { skillCategories } = portfolioData;
@@ -15,19 +14,19 @@ export default function SkillsSection() {
           <div>
             <div className="flex items-center gap-2 font-mono text-xs font-bold text-[#FF3E00] uppercase tracking-widest mb-2">
               <span className="w-1.5 h-1.5 bg-[#FF3E00] rounded-full" />
-              <span>04 // STACK TÉCNICO & CAD INDUSTRIAL</span>
+              <span>05 // SOFTWARE STACK & TECHNICAL CAPABILITIES</span>
             </div>
             <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight uppercase">
-              CAPACIDADES & DOMINIO DE SOFTWARE
+              CORE TOOLS & EXPERTISE
             </h2>
           </div>
 
           <div className="font-mono text-xs text-zinc-400 max-w-sm leading-relaxed">
-            Intersección entre el software de ingeniería automotriz de alta gama (CATIA V5) y las herramientas de renderizado digital para gaming (Blender, Roblox Studio, Photoshop).
+            The intersection between heavy automotive engineering CAD (CATIA V5, SolidWorks) and digital rendering pipelines (Blender Cycles, KeyShot, Adobe Suite, Roblox Studio).
           </div>
         </div>
 
-        {/* 3-Column Telemetry Matrix */}
+        {/* 3-Column Matrix */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 font-mono">
           {skillCategories.map((category, idx) => (
             <div
@@ -72,7 +71,7 @@ export default function SkillsSection() {
               </div>
 
               <div className="pt-5 mt-6 border-t border-white/5 text-[10px] text-zinc-600 uppercase text-center">
-                // SPEC VERIFIED
+                // PRODUCTION VERIFIED
               </div>
             </div>
           ))}

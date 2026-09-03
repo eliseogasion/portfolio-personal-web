@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { portfolioData } from '@/data/portfolioData';
-import { Menu, X, FileText, Send, Terminal } from 'lucide-react';
+import { Menu, X, FileText, Send } from 'lucide-react';
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -17,11 +17,12 @@ export default function Navbar() {
   }, []);
 
   const navLinks = [
-    { label: '01 // PROYECTOS', href: '#proyectos' },
-    { label: '02 // ROBLOX / VOLDEX', href: '#roblox-spotlight' },
-    { label: '03 // TRAYECTORIA', href: '#experiencia' },
-    { label: '04 // SKILLS & CAD', href: '#skills' },
-    { label: '05 // CONTACTO', href: '#contacto' },
+    { label: '01 // WORK', href: '#projects' },
+    { label: '02 // 3D & GAME ART', href: '#cinematic-showcase' },
+    { label: '03 // ESTUDIO 55', href: '#estudio-55' },
+    { label: '04 // EXPERIENCE', href: '#experience' },
+    { label: '05 // SKILLS', href: '#skills' },
+    { label: '06 // CONTACT', href: '#contact' },
   ];
 
   return (
@@ -44,7 +45,7 @@ export default function Navbar() {
                 {portfolioData.personal.name}
               </span>
               <span className="hidden sm:inline-block text-[9px] font-mono font-semibold px-2 py-0.5 rounded-xs bg-white/5 text-[#FF3E00] border border-[#FF3E00]/30 tracking-wider">
-                OEM SURFACING & 3D
+                CLASS-A SURFACING & 3D ART
               </span>
             </div>
             <p className="text-[10px] font-mono text-zinc-500 hidden sm:block">
@@ -74,13 +75,13 @@ export default function Navbar() {
             className="flex items-center gap-1.5 px-3 py-1.5 text-xs font-mono font-semibold text-zinc-300 bg-zinc-900 border border-zinc-700/80 hover:border-white hover:text-white rounded-xs transition-all"
           >
             <FileText className="w-3.5 h-3.5 text-[#FF3E00]" />
-            <span>CV (PDF)</span>
+            <span>RESUME (PDF)</span>
           </a>
           <a
-            href="#contacto"
+            href="#contact"
             className="flex items-center gap-1.5 px-4 py-1.5 text-xs font-mono font-bold text-black bg-[#FF3E00] hover:bg-white rounded-xs transition-all tracking-wider shadow-sm shadow-[#FF3E00]/30"
           >
-            <span>CONTACT</span>
+            <span>GET IN TOUCH</span>
           </a>
         </div>
 
@@ -88,7 +89,7 @@ export default function Navbar() {
         <button
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className="p-2 text-zinc-400 hover:text-white lg:hidden rounded-xs bg-zinc-900 border border-zinc-800"
-          aria-label="Abrir menú"
+          aria-label="Toggle navigation menu"
         >
           {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
         </button>
@@ -114,14 +115,14 @@ export default function Navbar() {
               className="flex items-center justify-center gap-2 py-2.5 text-xs font-mono font-semibold text-zinc-300 bg-zinc-900 rounded-xs border border-zinc-800"
             >
               <FileText className="w-4 h-4 text-[#FF3E00]" />
-              DESCARGAR CV EN PDF
+              DOWNLOAD RESUME (PDF)
             </a>
             <a
-              href="#contacto"
+              href="#contact"
               onClick={() => setMobileMenuOpen(false)}
               className="flex items-center justify-center gap-2 py-2.5 text-xs font-mono font-bold text-black bg-[#FF3E00] rounded-xs"
             >
-              CONTACTAR // POSTULACIÓN
+              CONTACT // DISPATCH
             </a>
           </div>
         </div>

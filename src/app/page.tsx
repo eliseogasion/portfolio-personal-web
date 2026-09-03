@@ -1,8 +1,8 @@
 import Navbar from '@/components/Navbar';
 import Hero from '@/components/Hero';
-import Estudio55Section from '@/components/Estudio55Section';
-import RobloxSpotlight from '@/components/RobloxSpotlight';
+import CinematicRenderShowcase from '@/components/CinematicRenderShowcase';
 import ProjectGallery from '@/components/ProjectGallery';
+import Estudio55Section from '@/components/Estudio55Section';
 import ExperienceSection from '@/components/ExperienceSection';
 import SkillsSection from '@/components/SkillsSection';
 import ContactFooter from '@/components/ContactFooter';
@@ -13,9 +13,9 @@ export default function Home() {
       <Navbar />
       <main className="flex-grow">
         <Hero />
-        <Estudio55Section />
-        <RobloxSpotlight />
+        <CinematicRenderShowcase />
         <ProjectGallery />
+        <Estudio55Section />
         <ExperienceSection />
         <SkillsSection />
       </main>

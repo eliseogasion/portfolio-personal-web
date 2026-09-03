@@ -3,12 +3,11 @@
 import React from 'react';
 import Image from 'next/image';
 import { portfolioData } from '@/data/portfolioData';
-import { Hammer, Layers, Cpu, Play, Check, Flame, Box, Sparkles, ArrowUpRight } from 'lucide-react';
 
 export default function Estudio55Section() {
   return (
     <section id="estudio-55" className="py-24 bg-[#050507] border-t border-white/10 relative overflow-hidden">
-      {/* Background Subtle Gradient */}
+      {/* Background Subtle Glow */}
       <div className="absolute top-1/2 right-10 w-[500px] h-[500px] bg-[#DF5A2B]/10 blur-[170px] rounded-full pointer-events-none -z-10" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -17,26 +16,26 @@ export default function Estudio55Section() {
           <div>
             <div className="flex items-center gap-2 font-mono text-xs font-bold text-[#FF3E00] uppercase tracking-widest mb-2">
               <span className="w-1.5 h-1.5 bg-[#FF3E00] rounded-full" />
-              <span>02 // VENTURE & INDUSTRIAL LAB</span>
+              <span>03 // VENTURE & INDUSTRIAL LAB</span>
             </div>
             <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight uppercase">
-              ESTUDIO 55 // FACETA EMPRENDEDORA
+              ESTUDIO 55 // CRAFT & ENTREPRENEURSHIP
             </h2>
           </div>
 
           <div className="font-mono text-xs text-zinc-400 max-w-md leading-relaxed">
-            [ROL]: Fundador, Diseñador de Producto & Artista 3D. Diseño de mobiliario de autor, mecanizado CNC y renders comerciales de catálogo.
+            [ROLE]: Founder, Product Designer & 3D Artist. Bespoke furniture design, multi-axis CNC machining, and commercial photorealistic renders.
           </div>
         </div>
 
-        {/* Spotlight Grid: Video/Visual + Entrepreneurial Pillars */}
+        {/* Spotlight Grid */}
         <div className="rounded-xs bg-black border border-white/15 p-6 sm:p-10 shadow-2xl relative mb-12">
           <div className="absolute -top-[1px] left-10 px-3 py-0.5 bg-[#FF3E00] text-black font-mono text-[9px] font-black uppercase tracking-wider">
             FOUNDER & LEAD PRODUCT DESIGNER
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
-            {/* Left: Real Video / Render */}
+            {/* Left: Real Video & Renders */}
             <div className="lg:col-span-7 space-y-4">
               <div className="relative aspect-video rounded-xs overflow-hidden border border-white/20 bg-zinc-950 group">
                 <video
@@ -49,7 +48,7 @@ export default function Estudio55Section() {
                   className="w-full h-full object-cover"
                 />
                 <div className="absolute top-3 left-3 bg-black/85 backdrop-blur-md px-2.5 py-1 border border-white/10 font-mono text-[10px] text-zinc-300">
-                  <span className="text-[#FF3E00] font-bold">ESTUDIO 55</span> // UNIONES & MECANIZADO CNC
+                  <span className="text-[#FF3E00] font-bold">ESTUDIO 55</span> // CNC JOINERY & CINEMATIC TURNTABLE
                 </div>
               </div>
 
@@ -63,7 +62,7 @@ export default function Estudio55Section() {
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute bottom-1 left-1.5 font-mono text-[9px] bg-black/80 px-1 text-white">
-                    SILLA ENZO
+                    ENZO CHAIR
                   </div>
                 </div>
 
@@ -75,35 +74,35 @@ export default function Estudio55Section() {
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute bottom-1 left-1.5 font-mono text-[9px] bg-black/80 px-1 text-white">
-                    MESA SAAR
+                    SAAR TABLE
                   </div>
                 </div>
 
                 <div className="relative aspect-video border border-white/10 overflow-hidden group">
                   <Image
                     src="/projects/estudio55-living.png"
-                    alt="Colección Manifiesto en Living"
+                    alt="Manifiesto Living Environment"
                     fill
                     className="object-cover transition-transform duration-500 group-hover:scale-105"
                   />
                   <div className="absolute bottom-1 left-1.5 font-mono text-[9px] bg-black/80 px-1 text-white">
-                    MANIFIESTO LIVING
+                    MANIFIESTO SCENE
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Right: The Multidisciplinary Argument for Voldex */}
+            {/* Right: The Multidisciplinary & Entrepreneurial Perspective */}
             <div className="lg:col-span-5 space-y-6">
               <div>
                 <span className="font-mono text-xs text-[#FF3E00] font-bold uppercase tracking-wider">
-                  VISIÓN HOLÍSTICA DE PRODUCTO
+                  HOLISTIC PRODUCT OWNERSHIP
                 </span>
                 <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight uppercase mt-1 mb-3">
-                  De la ingeniería de garage a la escala comercial
+                  From Workshop Engineering to Commercial Scale
                 </h3>
                 <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed font-sans">
-                  Crear <strong className="text-white">Estudio 55</strong> significó asumir el control total de una marca física: desde el boceto y cálculo de resistencia hasta el fresado CNC en madera maciza de Laurel, la dirección de arte y los renders de catálogo para ventas directas.
+                  Founding <strong className="text-white">Estudio 55</strong> demonstrates full end-to-end initiative: taking a product from rough concept sketch, mechanical stress calculations, and CNC milling in solid 2-inch Laurel wood, all the way to commercial art direction and photorealistic catalog renders.
                 </p>
               </div>
 
@@ -113,10 +112,10 @@ export default function Estudio55Section() {
                   <div className="w-1.5 h-1.5 bg-[#FF3E00] mt-1.5 flex-shrink-0" />
                   <div>
                     <div className="text-xs font-bold text-white uppercase">
-                      DISEÑO CAD/CAM & FABRICACIÓN DIGITAL
+                      CAD/CAM & DIGITAL FABRICATION
                     </div>
                     <div className="text-[11px] text-zinc-400 font-sans mt-0.5">
-                      Modelado en CATIA/SolidWorks, programación de trayectorias de corte CNC, optimización de placas y tolerancias de encastre.
+                      Parametric modeling in SolidWorks/CATIA, CNC toolpath programming (G-Code), nesting optimization, and precise assembly tolerances.
                     </div>
                   </div>
                 </div>
@@ -125,10 +124,10 @@ export default function Estudio55Section() {
                   <div className="w-1.5 h-1.5 bg-[#FF3E00] mt-1.5 flex-shrink-0" />
                   <div>
                     <div className="text-xs font-bold text-white uppercase">
-                      RENDERIZADO COMERCIAL & SHADERS PBR
+                      COMMERCIAL 3D RENDERING & PBR SHADERS
                     </div>
                     <div className="text-[11px] text-zinc-400 font-sans mt-0.5">
-                      Visualización fotorrealista para e-commerce: calibración de maderas, laca poliuretánica mate, vetas reales e iluminación de ambiente.
+                      E-commerce visualization: realistic wood grain porosity, polyurethane matte coatings, and natural atmospheric lighting rigs.
                     </div>
                   </div>
                 </div>
@@ -137,10 +136,10 @@ export default function Estudio55Section() {
                   <div className="w-1.5 h-1.5 bg-[#FF3E00] mt-1.5 flex-shrink-0" />
                   <div>
                     <div className="text-xs font-bold text-white uppercase">
-                      OWNERSHIP & EJECUCIÓN END-TO-END
+                      END-TO-END EXECUTION & BRANDING
                     </div>
                     <div className="text-[11px] text-zinc-400 font-sans mt-0.5">
-                      Gestión de presupuesto, trato con proveedores, producción por lotes (Batch 01) y estrategia digital de marketing.
+                      Supplier logistics, numbered limited production runs (Batch 01), art direction, and digital marketing strategy.
                     </div>
                   </div>
                 </div>
@@ -148,7 +147,7 @@ export default function Estudio55Section() {
 
               {/* Quote from Manifiesto */}
               <div className="p-4 bg-zinc-900/40 border-l-2 border-[#FF3E00] font-mono text-xs text-zinc-400 italic">
-                &ldquo;Honestidad constructiva y resolución técnica: Los encastres a la vista no son imperfecciones, son la firma de la autenticidad.&rdquo;
+                &ldquo;Constructive honesty and technical resolution: Exposed joinery is not an imperfection—it is the hallmark of authenticity.&rdquo;
               </div>
             </div>
           </div>

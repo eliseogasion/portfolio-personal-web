@@ -14,33 +14,34 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://portfolio-estudio55.vercel.app'),
-  title: `${portfolioData.personal.name} | Industrial Designer & 3D Render Artist`,
-  description: `${portfolioData.personal.headline} Proyectos de Estudio 55 y especialización en Roblox (Driving Empire).`,
+  metadataBase: new URL('https://eliseo-gasion.vercel.app'),
+  title: `${portfolioData.personal.name} | Industrial Designer & 3D Automotive Artist`,
+  description: `${portfolioData.personal.headline}`,
   keywords: [
-    'Render Artist',
-    'Driving Empire',
-    'Roblox Renders',
-    'Diseñador Industrial',
-    'Estudio 55',
-    'Automotive 3D',
+    'Industrial Designer',
+    'Automotive 3D Artist',
+    'Class-A Surfacing',
+    'CATIA V5',
     'Blender Cycles',
-    'Voldex',
-    '3D Visualization',
-    'Hard-surface'
+    'Volkswagen Amarok 2024',
+    'Renault H1312',
+    'Estudio 55',
+    'Vehicle Lighting Renders',
+    'Game Art',
+    'High-CTR Marketing Art'
   ],
   authors: [{ name: portfolioData.personal.name }],
   openGraph: {
-    title: `${portfolioData.personal.name} | 3D Render Artist & Diseñador Industrial`,
+    title: `${portfolioData.personal.name} | Industrial Designer & 3D Automotive Artist`,
     description: portfolioData.personal.headline,
     type: 'website',
-    locale: 'es_ES',
+    locale: 'en_US',
     images: [
       {
-        url: '/projects/roblox-driving-empire-hero.svg',
+        url: '/projects/vw-amarok-headlights.svg',
         width: 1280,
         height: 720,
-        alt: 'Portfolio Showcase'
+        alt: 'Eliseo Gasion Portfolio Showcase'
       }
     ]
   }
@@ -52,11 +53,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className={`${geistSans.variable} ${geistMono.variable} scroll-smooth dark`}>
+    <html lang="en" className={`${geistSans.variable} ${geistMono.variable} scroll-smooth dark`}>
       <head>
-        <meta name="theme-color" content="#09090b" />
+        <meta name="theme-color" content="#050507" />
       </head>
-      <body className="min-h-screen bg-zinc-950 text-zinc-100 antialiased selection:bg-sky-500 selection:text-white">
+      <body className="min-h-screen bg-[#050507] text-zinc-100 antialiased selection:bg-[#FF3E00] selection:text-black font-sans">
         {children}
       </body>
     </html>

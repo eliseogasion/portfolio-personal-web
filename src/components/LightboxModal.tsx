@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import { ProjectItem } from '@/data/portfolioData';
-import { X, ChevronLeft, ChevronRight, Check, Wrench, Package, Terminal } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
 interface LightboxModalProps {
   project: ProjectItem | null;
@@ -81,7 +81,7 @@ export default function LightboxModal({
               {project.specCode}
             </span>
             <span className="text-xs text-zinc-400">
-              CLIENT // <strong className="text-white">{project.clientOrContext}</strong>
+              CONTEXT // <strong className="text-white">{project.clientOrContext}</strong>
             </span>
           </div>
 
@@ -90,7 +90,7 @@ export default function LightboxModal({
               onClick={() => hasPrev && onSelectProject(projectsList[currentIndex - 1])}
               disabled={!hasPrev}
               className="p-1.5 text-zinc-400 hover:text-white disabled:opacity-20 transition-colors"
-              title="Anterior (←)"
+              title="Previous (←)"
             >
               <ChevronLeft className="w-5 h-5" />
             </button>
@@ -101,7 +101,7 @@ export default function LightboxModal({
               onClick={() => hasNext && onSelectProject(projectsList[currentIndex + 1])}
               disabled={!hasNext}
               className="p-1.5 text-zinc-400 hover:text-white disabled:opacity-20 transition-colors"
-              title="Siguiente (→)"
+              title="Next (→)"
             >
               <ChevronRight className="w-5 h-5" />
             </button>
@@ -111,7 +111,7 @@ export default function LightboxModal({
             <button
               onClick={onClose}
               className="p-1.5 text-zinc-400 hover:text-[#FF3E00] transition-colors"
-              title="Cerrar (Esc)"
+              title="Close (Esc)"
             >
               <X className="w-5 h-5" />
             </button>
@@ -159,7 +159,7 @@ export default function LightboxModal({
                         : 'border-white/10 opacity-60 hover:opacity-100'
                     }`}
                   >
-                    <Image src={img} alt={`Ángulo ${idx + 1}`} fill className="object-cover" />
+                    <Image src={img} alt={`Angle ${idx + 1}`} fill className="object-cover" />
                   </button>
                 ))}
               </div>
@@ -181,7 +181,7 @@ export default function LightboxModal({
 
               <div>
                 <h4 className="font-mono text-xs font-bold text-[#FF3E00] uppercase tracking-wider mb-2">
-                  // DESCRIPCIÓN & ENFOQUE TÉCNICO
+                  // OVERVIEW & DESIGN INTENT
                 </h4>
                 <p className="text-xs sm:text-sm text-zinc-300 leading-relaxed font-normal">
                   {project.description}
@@ -191,7 +191,7 @@ export default function LightboxModal({
               {project.processBreakdown && (
                 <div>
                   <h4 className="font-mono text-xs font-bold text-[#FF3E00] uppercase tracking-wider mb-3">
-                    // PIPELINE DE DESARROLLO & RENDERIZADO
+                    // DEVELOPMENT & RENDERING PIPELINE
                   </h4>
                   <div className="space-y-2">
                     {project.processBreakdown.map((step, sIdx) => (
@@ -210,10 +210,9 @@ export default function LightboxModal({
 
             {/* Right: Telemetry Specs & Deliverables */}
             <div className="lg:col-span-5 space-y-6 lg:border-l lg:border-white/10 lg:pl-8 font-mono">
-              {/* Engineering Specs Table */}
               <div>
                 <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-3 pb-2 border-b border-white/10">
-                  // FICHA DE HOMOLOGACIÓN
+                  // PROJECT SPECIFICATIONS
                 </h4>
                 <div className="space-y-2 text-xs">
                   {project.engineeringSpecs.map((spec, idx) => (
@@ -225,10 +224,9 @@ export default function LightboxModal({
                 </div>
               </div>
 
-              {/* Tools */}
               <div>
                 <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-3">
-                  // SOFTWARE & ENTORNO
+                  // SOFTWARE & ENVIRONMENT
                 </h4>
                 <div className="flex flex-wrap gap-1.5">
                   {project.tools.map((tool, tIdx) => (
@@ -242,11 +240,10 @@ export default function LightboxModal({
                 </div>
               </div>
 
-              {/* Deliverables */}
               {project.deliverables && (
                 <div>
                   <h4 className="text-xs font-bold text-white uppercase tracking-wider mb-2">
-                    // ENTREGABLES
+                    // KEY DELIVERABLES
                   </h4>
                   <ul className="space-y-1 text-xs text-zinc-400">
                     {project.deliverables.map((deliv, dIdx) => (

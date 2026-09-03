@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { ProjectItem } from '@/data/portfolioData';
-import { Eye, Play, ArrowUpRight } from 'lucide-react';
+import { Eye, Play } from 'lucide-react';
 
 interface ProjectCardProps {
   project: ProjectItem;
@@ -30,7 +30,7 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
         <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">
           <div className="flex items-center gap-2 px-4 py-2 bg-[#FF3E00] text-black font-mono font-black text-xs uppercase tracking-wider shadow-lg transform translate-y-2 group-hover:translate-y-0 transition-transform">
             <Eye className="w-3.5 h-3.5" />
-            <span>FICHA TÉCNICA & RENDER</span>
+            <span>VIEW DOSSIER & RENDER</span>
           </div>
         </div>
 
@@ -41,7 +41,7 @@ export default function ProjectCard({ project, onSelect }: ProjectCardProps) {
           </span>
           {project.featured && (
             <span className="text-[9px] font-bold px-2 py-0.5 bg-[#FF3E00] text-black tracking-wider">
-              HIGHLIGHT
+              FEATURED
             </span>
           )}
         </div>

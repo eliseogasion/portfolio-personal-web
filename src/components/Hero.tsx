@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { portfolioData } from '@/data/portfolioData';
-import { ArrowRight, Download, Gamepad2, Compass, ShieldCheck } from 'lucide-react';
+import { ArrowRight, Download, Gamepad2 } from 'lucide-react';
 
 export default function Hero() {
   const { personal, telemetryStats } = portfolioData;
@@ -21,8 +21,8 @@ export default function Hero() {
           </div>
 
           <div className="hidden sm:inline-flex items-center gap-2 text-[11px] font-mono text-zinc-400">
-            <span>TARGET:</span>
-            <span className="text-white font-semibold">RENDER ARTIST // DRIVING EMPIRE @ VOLDEX</span>
+            <span>STATUS:</span>
+            <span className="text-white font-semibold">AVAILABLE FOR SELECT 3D & AUTOMOTIVE ART ROLES</span>
           </div>
         </div>
 
@@ -37,7 +37,7 @@ export default function Hero() {
             </span>
             <span className="hidden sm:inline text-zinc-600 font-mono text-2xl">//</span>
             <span className="text-xl sm:text-3xl lg:text-4xl font-bold text-zinc-400 tracking-tight uppercase">
-              AUTOMOTIVE 3D SURFACE & RENDER ARTIST
+              AUTOMOTIVE 3D & RENDER ARTIST
             </span>
           </div>
         </div>
@@ -45,33 +45,26 @@ export default function Hero() {
         {/* Value Proposition Description */}
         <div className="max-w-3xl mb-12">
           <p className="text-base sm:text-lg text-zinc-300 leading-relaxed font-normal">
-            +5 años desarrollando superficies automotrices complejas Clase A para{' '}
-            <strong className="text-white font-semibold">Volkswagen (faros Amarok 2024)</strong> y{' '}
-            <strong className="text-white font-semibold">Renault (fenders, paragolpes y consolas H1312)</strong>.
-            Llevo esa precisión técnica y comprensión física de materiales al mundo digital para crear{' '}
-            <strong className="text-[#FF3E00] font-semibold">
-              renders cinemáticos y miniaturas de alto impacto comercial
-            </strong>{' '}
-            para juegos de carreras masivos como <strong className="text-white font-semibold">Driving Empire en Roblox</strong>.
+            Backed by <strong className="text-white font-semibold">+5 years of engineering complex Class-A surfaces</strong> for the real automotive industry (<strong className="text-white font-semibold">Volkswagen Amarok 2024 headlights</strong>, <strong className="text-white font-semibold">Renault H1312 bodywork</strong>), paired with a lifelong creative drive for <strong className="text-[#FF3E00] font-semibold">cinematic 3D rendering, automotive lighting, and game art</strong>.
           </p>
         </div>
 
         {/* CTAs */}
         <div className="flex flex-wrap items-center gap-4 mb-16">
           <a
-            href="#proyectos"
+            href="#projects"
             className="inline-flex items-center gap-3 px-7 py-4 rounded-xs bg-[#FF3E00] hover:bg-white text-black font-mono font-black text-xs uppercase tracking-widest shadow-xl shadow-[#FF3E00]/20 hover:scale-[1.02] active:scale-[0.98] transition-all"
           >
-            <span>VER CATÁLOGO TÉCNICO</span>
+            <span>EXPLORE WORK</span>
             <ArrowRight className="w-4 h-4" />
           </a>
 
           <a
-            href="#roblox-spotlight"
+            href="#cinematic-showcase"
             className="inline-flex items-center gap-3 px-6 py-4 rounded-xs bg-zinc-900 hover:bg-zinc-800 text-white font-mono font-bold text-xs uppercase tracking-wider border border-white/10 hover:border-white/30 transition-all"
           >
             <Gamepad2 className="w-4 h-4 text-[#FF3E00]" />
-            <span>PROPUESTA DRIVING EMPIRE</span>
+            <span>3D & GAME ART SHOWCASE</span>
           </a>
 
           <a
@@ -80,18 +73,17 @@ export default function Hero() {
             className="inline-flex items-center gap-2 px-5 py-4 rounded-xs text-zinc-400 hover:text-white font-mono text-xs uppercase tracking-wider transition-colors"
           >
             <Download className="w-4 h-4 text-zinc-500" />
-            <span>CV EN PDF</span>
+            <span>DOWNLOAD CV (PDF)</span>
           </a>
         </div>
 
-        {/* Telemetry Stats Grid (Automotive Monolith HUD) */}
+        {/* Telemetry Stats Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {telemetryStats.map((stat, idx) => (
             <div
               key={idx}
               className="relative p-5 rounded-xs bg-black/80 border border-white/10 hover:border-[#FF3E00]/50 transition-colors group"
             >
-              {/* Corner tick marker */}
               <div className="absolute top-0 right-0 w-2 h-2 border-t-2 border-r-2 border-[#FF3E00] opacity-0 group-hover:opacity-100 transition-opacity" />
 
               <div className="font-mono text-2xl sm:text-3xl font-black text-white tracking-tight mb-1 group-hover:text-[#FF3E00] transition-colors">
