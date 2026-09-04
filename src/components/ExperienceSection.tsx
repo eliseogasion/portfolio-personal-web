@@ -99,13 +99,9 @@ export default function ExperienceSection() {
                 </div>
               </div>
 
-              <div className="flex justify-between py-2 text-xs border-b border-white/5">
+              <div className="flex justify-between py-2 text-xs">
                 <span className="text-zinc-500">Spanish</span>
                 <span className="text-white font-medium">Native</span>
-              </div>
-              <div className="flex justify-between py-2 text-xs">
-                <span className="text-zinc-500">Italian</span>
-                <span className="text-white font-medium">A1 Elementary</span>
               </div>
             </div>
 

@@ -97,7 +97,7 @@ export const portfolioData: PortfolioConfig = {
     {
       period: "JUN 2023 — PRESENT",
       role: "Product Engineer & Industrial Designer",
-      company: "SD Ingeniería",
+      company: "Teknis",
       location: "Córdoba, Argentina",
       highlight: "Renault H1312 Latam Program",
       description:
@@ -155,7 +155,7 @@ export const portfolioData: PortfolioConfig = {
     {
       period: "JUN 2020 — MAY 2022",
       role: "Product Engineer & Surfacing Specialist",
-      company: "SD Ingeniería",
+      company: "Teknis",
       location: "Córdoba, Argentina",
       highlight: "Volkswagen Amarok 2024 Headlights",
       description:
@@ -258,7 +258,7 @@ export const portfolioData: PortfolioConfig = {
       subtitle: "Production engineering of front/rear bumpers, wheel-arch fenders, body claddings, and center consoles",
       category: "automotive-oem",
       categoryLabel: "Automotive OEM",
-      clientOrContext: "Renault LatAm / SD Ingeniería",
+      clientOrContext: "Renault LatAm / Teknis",
       year: "2023 — Present",
       heroImage: "/projects/renault-h1312-panels.svg",
       gallery: [
