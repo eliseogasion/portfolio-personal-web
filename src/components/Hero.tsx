@@ -67,7 +67,7 @@ export default function Hero() {
         {/* Featured Visual Canvas (Porsche-Style Cinematic Banner) */}
         <div className="relative aspect-[21/9] w-full rounded-xl overflow-hidden bg-zinc-950 border border-white/10 shadow-2xl mb-16 group">
           <Image
-            src="/projects/vw-amarok-headlights.svg"
+            src="/projects/vw-amarok-headlights.jpg"
             alt="Volkswagen Amarok 2024 Headlight Systems"
             fill
             priority

@@ -226,9 +226,9 @@ export const portfolioData: PortfolioConfig = {
       categoryLabel: "Automotive OEM",
       clientOrContext: "Volkswagen LatAm / F2J Lighting (France)",
       year: "2020 — 2022",
-      heroImage: "/projects/vw-amarok-headlights.svg",
+      heroImage: "/projects/vw-amarok-headlights.jpg",
       gallery: [
-        "/projects/vw-amarok-headlights.svg",
+        "/projects/vw-amarok-headlights.jpg",
         "/projects/renault-h1312-panels.svg",
         "/projects/driving-empire-hypercar.svg"
       ],
@@ -263,7 +263,7 @@ export const portfolioData: PortfolioConfig = {
       heroImage: "/projects/renault-h1312-panels.svg",
       gallery: [
         "/projects/renault-h1312-panels.svg",
-        "/projects/vw-amarok-headlights.svg"
+        "/projects/vw-amarok-headlights.jpg"
       ],
       tags: ["Renault", "Bodywork", "Fenders & Bumpers", "Plastic Injection", "CATIA V5"],
       tools: ["CATIA V5", "SolidWorks", "KeyShot", "Photoshop"],

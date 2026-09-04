@@ -38,7 +38,7 @@ export const metadata: Metadata = {
     locale: 'en_US',
     images: [
       {
-        url: '/projects/vw-amarok-headlights.svg',
+        url: '/projects/vw-amarok-headlights.jpg',
         width: 1280,
         height: 720,
         alt: 'Eliseo Gasion Portfolio Showcase'
