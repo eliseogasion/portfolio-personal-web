@@ -3,6 +3,7 @@
 import React, { useState } from 'react';
 import { portfolioData } from '@/data/portfolioData';
 import { Mail, Copy, Check, ExternalLink, ArrowUp, Phone, MapPin, ArrowUpRight } from 'lucide-react';
+import Reveal from '@/components/ui/Reveal';
 
 export default function ContactFooter() {
   const { personal } = portfolioData;
@@ -22,13 +23,14 @@ export default function ContactFooter() {
     <footer id="contact" className="pt-24 pb-12 bg-[#0B0B0D] border-t border-white/10">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
         {/* Contact Hero Banner */}
-        <div className="max-w-3xl mx-auto text-center mb-20">
-          <div className="flex items-center justify-center gap-2 mb-3">
-            <span className="w-2 h-2 rounded-full bg-[#D5001C]" />
-            <span className="text-xs uppercase tracking-[0.2em] font-medium text-zinc-400">
-              Get in Touch
-            </span>
-          </div>
+        <Reveal delay={50} className="max-w-3xl mx-auto text-center mb-20">
+          <div>
+            <div className="flex items-center justify-center gap-2 mb-3">
+              <span className="w-2 h-2 rounded-full bg-[#D5001C] animate-pulse-subtle shadow-[0_0_8px_rgba(213,0,28,0.5)]" />
+              <span className="text-xs uppercase tracking-[0.2em] font-medium text-zinc-400">
+                Get in Touch
+              </span>
+            </div>
 
           <h2 className="text-3xl sm:text-5xl font-bold text-white tracking-tight mb-6 leading-tight">
             Let&apos;s build exceptional automotive visuals.
@@ -87,7 +89,8 @@ export default function ContactFooter() {
               <ArrowUpRight className="w-3.5 h-3.5 opacity-70" />
             </a>
           </div>
-        </div>
+          </div>
+        </Reveal>
 
         {/* Minimal Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500 font-light">

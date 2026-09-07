@@ -4,6 +4,12 @@
   --background: #0b0b0d;
   --foreground: #f4f4f6;
   --accent-red: #d5001c;
+
+  /* Quiet Luxury Motion Tokens */
+  --ease-luxury: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-reveal: 800ms;
+  --duration-hover: 400ms;
+  --reveal-distance: 20px;
 }
 
 html {
@@ -38,3 +44,79 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #383842;
 }
+
+/* ==========================================================================
+   Modular Reveal & Animation Utilities ("Quiet Luxury")
+   ========================================================================== */
+
+.reveal-container {
+  transition-property: opacity, transform;
+  transition-duration: var(--duration-reveal);
+  transition-timing-function: var(--ease-luxury);
+  will-change: opacity, transform;
+}
+
+.reveal-hidden-up {
+  opacity: 0;
+  transform: translateY(var(--reveal-distance));
+}
+
+.reveal-hidden-none {
+  opacity: 0;
+  transform: none;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Subtle ambient pulse for status indicators */
+@keyframes pulse-subtle {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.55;
+    transform: scale(1.2);
+  }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Modal Smooth Entrance */
+@keyframes modal-scale-in {
+  from {
+    opacity: 0;
+    transform: scale(0.97) translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-modal-luxury {
+  animation: modal-scale-in 350ms var(--ease-luxury) forwards;
+}
+
+/* Respect user preferences for reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .reveal-hidden-up,
+  .reveal-hidden-none {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}
+

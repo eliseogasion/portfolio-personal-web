@@ -70,10 +70,10 @@ export default function LightboxModal({
   const hasNext = currentIndex < projectsList.length - 1;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 md:p-10 bg-black/90 backdrop-blur-xl animate-in fade-in duration-200">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 md:p-10 bg-black/90 backdrop-blur-xl transition-all duration-300">
       <div className="absolute inset-0" onClick={onClose} />
 
-      <div className="relative w-full max-w-6xl max-h-[92vh] bg-[#0E0E11] border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col z-10">
+      <div className="relative w-full max-w-6xl max-h-[92vh] bg-[#0E0E11] border border-white/10 rounded-2xl shadow-2xl overflow-hidden flex flex-col z-10 animate-modal-luxury">
         {/* Header */}
         <div className="flex items-center justify-between px-6 py-4 border-b border-white/10 bg-[#0B0B0D]">
           <div className="flex items-center gap-3">
