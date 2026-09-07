@@ -29,6 +29,7 @@ export interface PortfolioConfig {
     email: string;
     linkedin: string;
     artstation: string;
+    estudio55Instagram: string;
     resumePdf: string;
     englishLevel: string;
     availability: string;
@@ -74,6 +75,7 @@ export const portfolioData: PortfolioConfig = {
     email: "eliseogasion@gmail.com",
     linkedin: "https://www.linkedin.com/in/eliseo-gasion",
     artstation: "https://www.artstation.com/",
+    estudio55Instagram: "https://www.instagram.com/estudio.55_/",
     resumePdf: "/cv/CV-Eliseo-Gasion.pdf",
     englishLevel: "B2 Upper-Intermediate / Fluent Technical & Conversational English",
     availability: "Available for Remote Product Design & Visualization Roles",

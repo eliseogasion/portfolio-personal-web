@@ -119,6 +119,16 @@ export default function ContactFooter() {
               <ArrowUpRight className="w-3 h-3 opacity-60" />
             </a>
 
+            <a
+              href={personal.estudio55Instagram}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-zinc-400 hover:text-white transition-colors flex items-center gap-1 uppercase tracking-wider text-[11px] font-medium"
+            >
+              <span>Estudio 55</span>
+              <ArrowUpRight className="w-3 h-3 opacity-60" />
+            </a>
+
             <button
               onClick={scrollToTop}
               className="p-2 rounded-full bg-white/5 hover:bg-white/10 text-zinc-400 hover:text-white transition-colors cursor-pointer ml-2"
