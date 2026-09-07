@@ -16,6 +16,7 @@ export interface ProjectItem {
   processBreakdown: string[];
   engineeringSpecs: { label: string; value: string }[];
   deliverables: string[];
+  disclaimer?: string;
   featured?: boolean;
 }
 
@@ -368,7 +369,7 @@ export const portfolioData: PortfolioConfig = {
       subtitle: "Historic automotive visualization, studio lighting architecture, and material study of the legendary 1975 930 Turbo",
       category: "cinematic-game",
       categoryLabel: "3D & Game Art",
-      clientOrContext: "Automotive Heritage & Material Study",
+      clientOrContext: "Speculative Concept & Candidacy Study // Driving Empire (Voldex)",
       year: "2026",
       heroImage: "/projects/porsche-930-driving-empire.jpg",
       gallery: [
@@ -377,15 +378,17 @@ export const portfolioData: PortfolioConfig = {
         "/projects/porsche-930-cyber-hangar.jpg",
         "/projects/porsche-930-turbo-hero.png"
       ],
-      tags: ["Porsche 911 Turbo (930)", "1975 Classic", "Blender Cycles", "Fuchs Wheels", "Whale Tail Wing", "Studio Lighting"],
+      tags: ["Porsche 911 Turbo (930)", "Driving Empire Study", "Voldex Candidacy", "1975 Classic", "Blender Cycles", "Fuchs Wheels", "Whale Tail Wing"],
       tools: ["Blender (Cycles)", "KeyShot", "Photoshop", "PBR Shaders"],
       description:
-        "High-fidelity historical automotive visualization of the iconic 1975 Porsche 911 Turbo 3.0 (chassis code 930). Focused on capturing classic German industrial design: wide-body aerodynamic surfacing, iconic Fuchs 5-leaf modular rims, rubber impact bellows, and the legendary first-generation Whale Tail rear wing under editorial studio softboxes.",
+        "Speculative 3D promotional key art and vehicle asset study created specifically to demonstrate automotive game-art capabilities and pipeline alignment for Voldex's Driving Empire. Features an authentic 1975 Porsche 911 Turbo 3.0 (Type 930) rendered across typical in-game promotional scenarios: coastal highway sunset action, high-tech customization hangar, and editorial showroom presentation.",
+      disclaimer:
+        "Disclaimer: This is an independent, non-commercial speculative concept and portfolio demonstration piece created to showcase 3D automotive artistry, lighting, and marketing asset capabilities for application review. 'Driving Empire' and 'Voldex' names and logos are trademarks and intellectual property of Voldex LLC.",
       processBreakdown: [
-        "Modeled and calibrated iconic G-series wide-body proportions, flare arches, and rubber impact bumper accordions.",
-        "Crafted physically accurate multi-layer dark graphite metallic clearcoat with authentic 1970s clear reflections.",
-        "Shader setup for classic Fuchs wheels: satin anodized black center star with high-polish brushed aluminum rim lip.",
-        "Curated a quiet luxury studio environment with dark slate sweep floor and soft diffuse linear overhead softboxes."
+        "Calibrated classic G-series wide-body proportions, flare arches, and iconic 5-leaf Fuchs modular rims.",
+        "Authored stylized in-game promotional key art scenarios matching Driving Empire's lighting aesthetic and visual tone.",
+        "Developed action compositions including golden hour high-speed cornering and underground tuning bay atmospheres.",
+        "Balanced high-fidelity automotive DFM / CAD appreciation with real-time game art presentation standards."
       ],
       engineeringSpecs: [
         { label: "Vehicle", value: "Porsche 911 Turbo 3.0 (Type 930)" },

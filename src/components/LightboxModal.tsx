@@ -188,6 +188,13 @@ export default function LightboxModal({
                 <p className="text-sm text-zinc-300 font-light leading-relaxed">
                   {project.description}
                 </p>
+
+                {project.disclaimer && (
+                  <div className="mt-4 p-3.5 rounded-lg bg-white/[0.03] border border-white/10 text-xs text-zinc-400 font-light leading-relaxed">
+                    <span className="text-zinc-300 font-medium block mb-1">Notice // Concept Exploration</span>
+                    {project.disclaimer}
+                  </div>
+                )}
               </div>
 
               {project.processBreakdown && (
