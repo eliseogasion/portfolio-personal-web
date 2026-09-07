@@ -370,10 +370,10 @@ export const portfolioData: PortfolioConfig = {
       categoryLabel: "3D & Game Art",
       clientOrContext: "Automotive Heritage & Material Study",
       year: "2026",
-      heroImage: "/projects/porsche-930-turbo-hero.png",
+      heroImage: "/projects/porsche-930-driving-empire.jpg",
       gallery: [
-        "/projects/porsche-930-turbo-hero.png",
-        "/projects/porsche-930-driving-empire.jpg"
+        "/projects/porsche-930-driving-empire.jpg",
+        "/projects/porsche-930-turbo-hero.png"
       ],
       tags: ["Porsche 911 Turbo (930)", "1975 Classic", "Blender Cycles", "Fuchs Wheels", "Whale Tail Wing", "Studio Lighting"],
       tools: ["Blender (Cycles)", "KeyShot", "Photoshop", "PBR Shaders"],
