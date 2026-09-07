@@ -29,9 +29,10 @@ export default function Hero() {
             <span className="text-zinc-400 font-normal">Visualizing complex ideas.</span>
           </h1>
 
-          <p className="text-base sm:text-xl text-zinc-300 font-light leading-relaxed max-w-2xl">
-            Industrial Designer specialized in product engineering and 3D visualization. Backed by +5 years developing automotive plastic injection components for global OEMs including{' '}
-            <strong className="text-white font-medium">Volkswagen, Stellantis, Renault, and Toyota</strong>.
+          <p className="text-base sm:text-xl text-zinc-300 font-light leading-relaxed max-w-3xl">
+            Industrial Designer specialized in product engineering and high-fidelity 3D visualization. Backed by +5 years developing Class-A automotive components for leading global automakers—including{' '}
+            <strong className="text-white font-medium">Volkswagen, Stellantis, Renault, and Toyota</strong>—bridging
+            rigorous CAD feasibility with aesthetic clarity and realistic visual communication.
           </p>
         </div>
 
