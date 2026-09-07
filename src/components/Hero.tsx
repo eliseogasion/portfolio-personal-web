@@ -76,8 +76,8 @@ export default function Hero() {
         <Reveal delay={450}>
           <div className="relative aspect-[21/9] w-full rounded-xl overflow-hidden bg-zinc-950 border border-white/10 shadow-2xl mb-16 group">
             <Image
-              src="/projects/porsche-gt3rs-hero.svg"
-              alt="Porsche 911 GT3 RS: License Launch & Material Study"
+              src="/projects/porsche-930-turbo-hero.png"
+              alt="Porsche 911 Turbo 3.0 (Type 930, 1975): Historic Studio & Material Study"
               fill
               priority
               sizes="(max-width: 1200px) 100vw, 1200px"
@@ -88,10 +88,10 @@ export default function Hero() {
               <div className="flex flex-col sm:flex-row sm:items-end justify-between w-full gap-4">
                 <div>
                   <span className="text-[11px] uppercase tracking-widest font-medium text-zinc-400 block mb-1">
-                    Featured Case Study // 3D &amp; Game Art
+                    Featured Case Study // Historic Automotive 3D
                   </span>
                   <h3 className="text-xl sm:text-2xl font-semibold text-white tracking-tight">
-                    Porsche 911 GT3 RS: Launch Key Art &amp; Material Study
+                    Porsche 911 Turbo 3.0 (Type 930, 1975): Studio &amp; Material Study
                   </h3>
                 </div>
 

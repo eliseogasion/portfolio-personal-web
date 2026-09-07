@@ -362,40 +362,38 @@ export const portfolioData: PortfolioConfig = {
       featured: true
     },
     {
-      id: "porsche-911-gt3rs-launch",
-      specCode: "P911-GT3RS-STUDY",
-      title: "Porsche 911 GT3 RS: License Launch & Material Study",
-      subtitle: "4K marketing key visual, multi-layer PBR shader exploration, and macro optical breakdown for automotive gaming",
+      id: "porsche-911-turbo-930",
+      specCode: "P930-TURBO-1975",
+      title: "Porsche 911 Turbo 3.0 (Type 930, 1975)",
+      subtitle: "Historic automotive visualization, studio lighting architecture, and material study of the legendary 1975 930 Turbo",
       category: "cinematic-game",
       categoryLabel: "3D & Game Art",
-      clientOrContext: "Automotive Art & Gaming Exploration",
+      clientOrContext: "Automotive Heritage & Material Study",
       year: "2026",
-      heroImage: "/projects/porsche-gt3rs-hero.svg",
+      heroImage: "/projects/porsche-930-turbo-hero.png",
       gallery: [
-        "/projects/porsche-gt3rs-hero.svg",
-        "/projects/porsche-gt3rs-headlight.svg",
-        "/projects/porsche-gt3rs-wheel-carbon.svg"
+        "/projects/porsche-930-turbo-hero.png"
       ],
-      tags: ["Porsche 911 GT3 RS", "Blender Cycles", "Automotive Shaders", "Marketing Key Art", "Matrix LED Optics"],
-      tools: ["Blender (Cycles)", "Adobe Photoshop", "PBR Materials", "Roblox Studio"],
+      tags: ["Porsche 911 Turbo (930)", "1975 Classic", "Blender Cycles", "Fuchs Wheels", "Whale Tail Wing", "Studio Lighting"],
+      tools: ["Blender (Cycles)", "KeyShot", "Photoshop", "PBR Shaders"],
       description:
-        "High-fidelity automotive render showcase and marketing launch asset designed for digital game storefronts. Explores realistic multi-layer automotive finishes (Guards Red tri-coat clearcoat, exposed carbon fiber twill, anisotropic carbon-ceramic brake rotors) combined with precise matrix LED headlight optics and cinematic studio illumination.",
+        "High-fidelity historical automotive visualization of the iconic 1975 Porsche 911 Turbo 3.0 (chassis code 930). Focused on capturing classic German industrial design: wide-body aerodynamic surfacing, iconic Fuchs 5-leaf modular rims, rubber impact bellows, and the legendary first-generation Whale Tail rear wing under editorial studio softboxes.",
       processBreakdown: [
-        "Staged 16:9 dynamic low-angle composition optimized for high click-through rates across mobile and desktop gaming storefronts.",
-        "Calibrated physically accurate PBR shader materials: deep metallic clearcoat, exposed gloss carbon weave, and matte aerodynamic splitters.",
-        "Engineered multi-layer matrix LED headlight optical elements with realistic internal refraction and lens dispersion.",
-        "Balanced studio softbox arrays with directional rim lights to sculpt the aerodynamic contours and aggressive active wing profile."
+        "Modeled and calibrated iconic G-series wide-body proportions, flare arches, and rubber impact bumper accordions.",
+        "Crafted physically accurate multi-layer dark graphite metallic clearcoat with authentic 1970s clear reflections.",
+        "Shader setup for classic Fuchs wheels: satin anodized black center star with high-polish brushed aluminum rim lip.",
+        "Curated a quiet luxury studio environment with dark slate sweep floor and soft diffuse linear overhead softboxes."
       ],
       engineeringSpecs: [
-        { label: "Subject", value: "Porsche 911 GT3 RS (992)" },
-        { label: "Key Art Ratio", value: "16:9 Cinematic (4K Master)" },
-        { label: "Rendering Engine", value: "Blender (Cycles PBR)" },
-        { label: "Optics Detail", value: "4-Point Matrix LED System" }
+        { label: "Vehicle", value: "Porsche 911 Turbo 3.0 (Type 930)" },
+        { label: "Model Year", value: "1975 (First-Gen Production Turbo)" },
+        { label: "Aero Feature", value: "Original Whale Tail Rear Spoiler" },
+        { label: "Wheels", value: "Classic Fuchs 5-Spoke (Black / Polished Lip)" }
       ],
       deliverables: [
-        "4K Hero Promotional Key Visual",
-        "Macro Headlight Optics Study",
-        "Wheel & Carbon Fiber Material Breakdown"
+        "4K Master Studio Render",
+        "PBR Material & Anodized Metal Shaders",
+        "High-Resolution Visual Assets for Gaming & Editorial"
       ],
       featured: true
     },
