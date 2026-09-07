@@ -25,13 +25,13 @@ export default function Hero() {
         {/* Main Headline */}
         <div className="max-w-4xl mb-8">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.05] mb-6">
-            From functional engineering<br />
-            <span className="text-zinc-400 font-normal">to compelling visualization.</span>
+            Shaping physical products.<br />
+            <span className="text-zinc-400 font-normal">Visualizing complex ideas.</span>
           </h1>
 
-          <p className="text-base sm:text-xl text-zinc-300 font-light leading-relaxed max-w-3xl">
-            Industrial Designer specialized in product engineering and high-fidelity 3D visualization. Backed by +5 years industrializing automotive components for leading global automakers—including{' '}
-            <strong className="text-white font-medium">Volkswagen, Stellantis, Renault, and Toyota</strong>—receiving styling Class-A surfaces and engineering production-ready parts for high-pressure plastic injection tooling, bridging CAD feasibility with aesthetic clarity.
+          <p className="text-base sm:text-xl text-zinc-300 font-light leading-relaxed max-w-2xl">
+            Industrial Designer specialized in product engineering and 3D visualization. Backed by +5 years developing automotive plastic injection components for global OEMs including{' '}
+            <strong className="text-white font-medium">Volkswagen, Stellantis, Renault, and Toyota</strong>.
           </p>
         </div>
 

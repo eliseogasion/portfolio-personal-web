@@ -78,7 +78,7 @@ export const portfolioData: PortfolioConfig = {
     englishLevel: "B2 Upper-Intermediate / Fluent Technical & Conversational English",
     availability: "Available for Remote Product Design & Visualization Roles",
     headline:
-      "Industrial Designer specialized in product engineering and high-fidelity 3D visualization. Backed by +5 years industrializing automotive components for leading global automakers—including Volkswagen, Stellantis, Renault, and Toyota—receiving styling Class-A surfaces and engineering production-ready parts for high-pressure plastic injection tooling, bridging CAD feasibility with aesthetic clarity.",
+      "Industrial Designer specialized in product engineering and 3D visualization. Backed by +5 years developing automotive plastic injection components for global OEMs including Volkswagen, Stellantis, Renault, and Toyota.",
     bioParagraphs: [
       "I am an Industrial Designer graduated from the National University of Córdoba (FAUD UNC) with an Electronic & Telecommunications technician background. At Teknis, my core focus has been product industrialization: receiving styling Class-A surfaces from design teams and engineering complete production-ready plastic parts (structural ribbing, bosses, snap-fits, mold parting lines, and draft angles) for high-pressure polymer injection across serial vehicle programs for Volkswagen, Stellantis, Renault, and Toyota.",
       "My profile bridges two essential disciplines: the analytical rigor of automotive product engineering (injection tooling feasibility, assembly packaging, DFM) and the aesthetic power of high-fidelity 3D visualization. I leverage Blender, KeyShot, and digital post-production to communicate mechanical and automotive design with clarity and realism.",
