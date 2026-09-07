@@ -18,22 +18,20 @@ export default function Hero() {
         <div className="flex items-center gap-3 mb-6">
           <span className="w-2 h-2 rounded-full bg-[#D5001C]" />
           <span className="text-xs uppercase tracking-[0.2em] font-medium text-zinc-400">
-            Automotive Surfacing &amp; Cinematic 3D
+            Industrial Design &amp; Product Engineering
           </span>
         </div>
 
         {/* Main Headline */}
         <div className="max-w-4xl mb-8">
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.05] mb-6">
-            Precision engineering.<br />
-            <span className="text-zinc-400 font-normal">Cinematic visual art.</span>
+            From functional engineering<br />
+            <span className="text-zinc-400 font-normal">to compelling visualization.</span>
           </h1>
 
           <p className="text-base sm:text-xl text-zinc-300 font-light leading-relaxed max-w-3xl">
-            Industrial Designer with +5 years shaping real-world Class-A automotive surfaces for{' '}
-            <strong className="text-white font-medium">Volkswagen</strong> and{' '}
-            <strong className="text-white font-medium">Renault</strong>, combined with a lifelong dedication to{' '}
-            <strong className="text-white font-medium">photorealistic lighting, vehicle shaders, and game aesthetics</strong>.
+            Industrial Designer specialized in product engineering and high-fidelity 3D visualization. Backed by +5 years developing Class-A automotive components for leading global automakers—including{' '}
+            <strong className="text-white font-medium">Volkswagen, Stellantis, Renault, and Toyota</strong>—bridging rigorous CAD feasibility with aesthetic clarity and realistic visual communication.
           </p>
         </div>
 
@@ -110,10 +108,10 @@ export default function Hero() {
 
           <div>
             <div className="text-2xl sm:text-3xl font-light text-white tracking-tight mb-1">
-              Volkswagen &amp; Renault
+              Global OEMs
             </div>
             <div className="text-xs uppercase tracking-wider text-zinc-500 font-medium">
-              OEM Serial Programs
+              VW • Stellantis • Toyota • Renault
             </div>
           </div>
 

@@ -92,7 +92,7 @@ export default function ContactFooter() {
         {/* Minimal Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500 font-light">
           <div>
-            <span className="text-zinc-300 font-medium">{personal.name}</span> • Industrial Design &amp; Automotive 3D
+            <span className="text-zinc-300 font-medium">{personal.name}</span> • Industrial Design &amp; Product Engineering
           </div>
 
           <div className="flex items-center gap-6">

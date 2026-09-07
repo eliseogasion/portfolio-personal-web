@@ -41,7 +41,7 @@ export default function Navbar() {
           </span>
           <span className="hidden sm:inline-block w-[1px] h-3.5 bg-zinc-700" />
           <span className="hidden sm:inline-block text-xs text-zinc-400 font-normal">
-            Automotive 3D &amp; Industrial Design
+            Industrial Design &amp; Product Engineering
           </span>
         </a>
 

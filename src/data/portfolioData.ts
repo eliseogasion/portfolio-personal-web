@@ -67,8 +67,8 @@ export interface PortfolioConfig {
 export const portfolioData: PortfolioConfig = {
   personal: {
     name: "Eliseo Gasión",
-    role: "Industrial Designer & 3D Automotive Artist",
-    subrole: "Complex Class-A Surfacing & Cinematic 3D Rendering",
+    role: "Industrial Designer & Product Engineer",
+    subrole: "Product Engineering & High-Fidelity 3D Visualization",
     location: "Córdoba, Argentina (Available Worldwide / Remote)",
     phone: "(+54) 351 522-1863",
     email: "eliseogasion@gmail.com",
@@ -76,13 +76,13 @@ export const portfolioData: PortfolioConfig = {
     artstation: "https://www.artstation.com/",
     resumePdf: "/cv/CV-Eliseo-Gasion.pdf",
     englishLevel: "B2 Upper-Intermediate / Fluent Technical & Conversational English",
-    availability: "Available for Remote Creative & 3D Artist Roles",
+    availability: "Available for Remote Product Design & Visualization Roles",
     headline:
-      "Bridging heavy industrial precision with artistic vision: 5+ years shaping Class-A automotive surfaces (Volkswagen Amarok 2024, Renault H1312) combined with a deep passion for cinematic lighting, game aesthetics, and high-impact 3D rendering.",
+      "Industrial Designer specialized in product engineering and high-fidelity 3D visualization. Backed by +5 years developing Class-A automotive components for leading global automakers—including Volkswagen, Stellantis, Renault, and Toyota—bridging rigorous CAD feasibility with aesthetic clarity and realistic visual communication.",
     bioParagraphs: [
-      "I am an Industrial Designer graduated from the National University of Córdoba (FAUD UNC) with an Electronic & Telecommunications technician background. Over the past 5+ years, I have engineered complex Class-A and G2 surfaces in CATIA V5 for leading OEM automakers including Volkswagen (2024 Amarok headlight optical systems) and Renault (H1312 fenders, bumpers, and center consoles).",
-      "While my professional foundation is rooted in rigorous engineering, I have always nurtured a passionate, dedicated creative side as a 3D artist. I master lighting, composition, shaders, and visual storytelling in Blender, Photoshop, and real-time environments to turn technical geometry into striking, emotionally charged visuals.",
-      "In parallel, I founded Estudio 55—an industrial design venture where I design and manufacture solid wood furniture through CNC machining, producing commercial photorealistic renders and visual assets from concept to final market delivery."
+      "I am an Industrial Designer graduated from the National University of Córdoba (FAUD UNC) with an Electronic & Telecommunications technician background. Over the past 5+ years, I have engineered complex Class-A and G2 surfaces in CATIA V5 and SolidWorks for major global automotive programs, collaborating on projects for Volkswagen, Stellantis, Renault, and Toyota.",
+      "My profile bridges two essential disciplines: the analytical rigor of product engineering (injection molding feasibility, assembly packaging, surface continuity) and the aesthetic power of high-fidelity 3D visualization. I leverage Blender, KeyShot, and digital post-production to communicate mechanical and automotive design with clarity and realism.",
+      "In parallel, I run Estudio 55—an independent furniture and product design studio where I explore author pieces, physical prototyping, and direct commercial visualization."
     ]
   },
 
