@@ -3,7 +3,7 @@ export interface ProjectItem {
   specCode: string;
   title: string;
   subtitle: string;
-  category: 'automotive-oem' | 'cinematic-game' | 'estudio-55' | 'simulation-product';
+  category: 'automotive-oem' | 'cinematic-game' | 'estudio-55';
   categoryLabel: string;
   clientOrContext: string;
   year: string;
@@ -360,35 +360,41 @@ export const portfolioData: PortfolioConfig = {
       featured: true
     },
     {
-      id: "flight-simulator-thesis",
-      specCode: "SIM-FLIGHT-FAUD-UNC",
-      title: "Flight Simulator: Cockpit Hardware & Ergonomics",
-      subtitle: "Industrial Design Degree Thesis: Ergonomic cockpit, tactile flight controls, and mechanical hardware simulation",
-      category: "simulation-product",
-      categoryLabel: "Simulation & Hardware",
-      clientOrContext: "FAUD National University of Córdoba (Degree Thesis)",
-      year: "2023",
-      heroImage: "/projects/flight-simulator-cockpit.svg",
+      id: "porsche-911-gt3rs-launch",
+      specCode: "P911-GT3RS-STUDY",
+      title: "Porsche 911 GT3 RS: License Launch & Material Study",
+      subtitle: "4K marketing key visual, multi-layer PBR shader exploration, and macro optical breakdown for automotive gaming",
+      category: "cinematic-game",
+      categoryLabel: "3D & Game Art",
+      clientOrContext: "Automotive Art & Gaming Exploration",
+      year: "2026",
+      heroImage: "/projects/porsche-gt3rs-hero.svg",
       gallery: [
-        "/projects/flight-simulator-cockpit.svg",
-        "/projects/driving-empire-hypercar.svg"
+        "/projects/porsche-gt3rs-hero.svg",
+        "/projects/porsche-gt3rs-headlight.svg",
+        "/projects/porsche-gt3rs-wheel-carbon.svg"
       ],
-      tags: ["Industrial Design Thesis", "Flight Simulator", "Cockpit Ergonomics", "Hardware Simulation"],
-      tools: ["SolidWorks", "Blender", "KeyShot", "Electronics & C++"],
+      tags: ["Porsche 911 GT3 RS", "Blender Cycles", "Automotive Shaders", "Marketing Key Art", "Matrix LED Optics"],
+      tools: ["Blender (Cycles)", "Adobe Photoshop", "PBR Materials", "Roblox Studio"],
       description:
-        "Graduation thesis project for the Industrial Design degree at FAUD UNC. Designed a fully functional flight simulator cockpit for initial-phase pilot instruction, emphasizing tactile feedback, realistic control column (yoke), throttle quadrant ergonomics, and modular mechanical structure.",
+        "High-fidelity automotive render showcase and marketing launch asset designed for digital game storefronts. Explores realistic multi-layer automotive finishes (Guards Red tri-coat clearcoat, exposed carbon fiber twill, anisotropic carbon-ceramic brake rotors) combined with precise matrix LED headlight optics and cinematic studio illumination.",
       processBreakdown: [
-        "Conducted anthropometric research on civil aviation training cockpits.",
-        "Engineered modular mechanical mechanisms for yoke, rudder pedals, and throttle quadrant with authentic resistance.",
-        "Integrated electronic sensors with simulation software for real-time response.",
-        "Produced comprehensive engineering drawings and photorealistic cockpit renders."
+        "Staged 16:9 dynamic low-angle composition optimized for high click-through rates across mobile and desktop gaming storefronts.",
+        "Calibrated physically accurate PBR shader materials: deep metallic clearcoat, exposed gloss carbon weave, and matte aerodynamic splitters.",
+        "Engineered multi-layer matrix LED headlight optical elements with realistic internal refraction and lens dispersion.",
+        "Balanced studio softbox arrays with directional rim lights to sculpt the aerodynamic contours and aggressive active wing profile."
       ],
       engineeringSpecs: [
-        { label: "Institution", value: "FAUD UNC (National University of Córdoba)" },
-        { label: "Thesis Scope", value: "Flight Training Simulator Hardware" },
-        { label: "Specialty", value: "Ergonomics, Mechanical CAD & Simulation" }
+        { label: "Subject", value: "Porsche 911 GT3 RS (992)" },
+        { label: "Key Art Ratio", value: "16:9 Cinematic (4K Master)" },
+        { label: "Rendering Engine", value: "Blender (Cycles PBR)" },
+        { label: "Optics Detail", value: "4-Point Matrix LED System" }
       ],
-      deliverables: ["Functional scaled prototype", "Cinematic cockpit renders", "Complete manufacturing drawings"],
+      deliverables: [
+        "4K Hero Promotional Key Visual",
+        "Macro Headlight Optics Study",
+        "Wheel & Carbon Fiber Material Breakdown"
+      ],
       featured: true
     },
     {

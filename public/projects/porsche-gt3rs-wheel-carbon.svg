@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" width="1280" height="720">
+  <defs>
+    <linearGradient id="porscheBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b0b0d" />
+      <stop offset="50%" stop-color="#141418" />
+      <stop offset="100%" stop-color="#08080a" />
+    </linearGradient>
+    <radialGradient id="carbonGlow" cx="45%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#d5001c" stop-opacity="0.08" />
+      <stop offset="100%" stop-color="#000000" stop-opacity="0" />
+    </radialGradient>
+  </defs>
+
+  <rect width="100%" height="100%" fill="url(#porscheBg)" />
+  <rect width="100%" height="100%" fill="url(#carbonGlow)" />
+  <rect x="40" y="40" width="1200" height="640" rx="16" fill="none" stroke="rgba(255, 255, 255, 0.08)" stroke-width="1" />
+
+  <g transform="translate(70, 75)">
+    <circle cx="0" cy="-4" r="3" fill="#d5001c" />
+    <text x="12" y="0" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="600" letter-spacing="1.5">MACRO STUDY 02 // PBR MATERIALS &amp; TEXTURES</text>
+    <text x="1140" y="0" fill="#8c8c94" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11" font-weight="400" letter-spacing="1" text-anchor="end">CARBON WEAVE &amp; CERAMIC BRAKES</text>
+  </g>
+
+  <!-- Central Schematic: Center-Lock Magnesium Wheel & Carbon-Ceramic Rotor -->
+  <g transform="translate(640, 350)">
+    <!-- Wheel Rim Outer -->
+    <circle cx="0" cy="0" r="180" fill="none" stroke="rgba(255,255,255,0.2)" stroke-width="3" />
+    <circle cx="0" cy="0" r="140" fill="none" stroke="#d5001c" stroke-width="1" stroke-dasharray="6 6" />
+
+    <!-- Carbon-Ceramic Rotor Disc (Drilled Holes) -->
+    <circle cx="0" cy="0" r="110" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.3)" stroke-width="2" />
+    <circle cx="0" cy="0" r="50" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.5" />
+    <circle cx="0" cy="0" r="25" fill="#d5001c" />
+
+    <!-- Monobloc Caliper (Yellow PCCB) -->
+    <path d="M 80 -80 C 130 -30, 130 30, 80 80 L 120 70 C 160 20, 160 -20, 120 -70 Z" fill="#FACC15" opacity="0.9" />
+
+    <text x="0" y="140" fill="#ffffff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="20" font-weight="700" letter-spacing="-0.5" text-anchor="middle">CENTER-LOCK MAGNESIUM &amp; CARBON ROTOR</text>
+    <text x="0" y="165" fill="#8c8c94" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="400" letter-spacing="0.5" text-anchor="middle">ANISOTROPIC SURFACE SHADING • TIRE TREAD DEPTH • GLOSS CARBON TWILL</text>
+  </g>
+
+  <g transform="translate(70, 640)">
+    <text x="0" y="0" fill="#52525b" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="11">DELIVERABLE: PBR MULTI-MATERIAL TEXTURING STUDY WITH REALISTIC CLEARCOAT RESPONSE</text>
+  </g>
+</svg>

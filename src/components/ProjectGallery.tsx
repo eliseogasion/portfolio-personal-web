@@ -14,7 +14,6 @@ export default function ProjectGallery() {
     { id: 'automotive-oem', label: 'Automotive OEM' },
     { id: 'cinematic-game', label: '3D & Game Art' },
     { id: 'estudio-55', label: 'Estudio 55 Design' },
-    { id: 'simulation-product', label: 'Hardware & Simulation' },
   ];
 
   const filteredProjects =
