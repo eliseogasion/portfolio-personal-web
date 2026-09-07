@@ -78,19 +78,19 @@ export const portfolioData: PortfolioConfig = {
     englishLevel: "B2 Upper-Intermediate / Fluent Technical & Conversational English",
     availability: "Available for Remote Product Design & Visualization Roles",
     headline:
-      "Industrial Designer specialized in product engineering and high-fidelity 3D visualization. Backed by +5 years developing Class-A automotive components for leading global automakers—including Volkswagen, Stellantis, Renault, and Toyota—bridging rigorous CAD feasibility with aesthetic clarity and realistic visual communication.",
+      "Industrial Designer specialized in product engineering and high-fidelity 3D visualization. Backed by +5 years industrializing automotive components for leading global automakers—including Volkswagen, Stellantis, Renault, and Toyota—receiving styling Class-A surfaces and engineering production-ready parts for high-pressure plastic injection tooling, bridging CAD feasibility with aesthetic clarity.",
     bioParagraphs: [
-      "I am an Industrial Designer graduated from the National University of Córdoba (FAUD UNC) with an Electronic & Telecommunications technician background. Over the past 5+ years, I have engineered complex Class-A and G2 surfaces in CATIA V5 and SolidWorks for major global automotive programs, collaborating on projects for Volkswagen, Stellantis, Renault, and Toyota.",
-      "My profile bridges two essential disciplines: the analytical rigor of product engineering (injection molding feasibility, assembly packaging, surface continuity) and the aesthetic power of high-fidelity 3D visualization. I leverage Blender, KeyShot, and digital post-production to communicate mechanical and automotive design with clarity and realism.",
+      "I am an Industrial Designer graduated from the National University of Córdoba (FAUD UNC) with an Electronic & Telecommunications technician background. At Teknis, my core focus has been product industrialization: receiving styling Class-A surfaces from design teams and engineering complete production-ready plastic parts (structural ribbing, bosses, snap-fits, mold parting lines, and draft angles) for high-pressure polymer injection across serial vehicle programs for Volkswagen, Stellantis, Renault, and Toyota.",
+      "My profile bridges two essential disciplines: the analytical rigor of automotive product engineering (injection tooling feasibility, assembly packaging, DFM) and the aesthetic power of high-fidelity 3D visualization. I leverage Blender, KeyShot, and digital post-production to communicate mechanical and automotive design with clarity and realism.",
       "In parallel, I run Estudio 55—an independent furniture and product design studio where I explore author pieces, physical prototyping, and direct commercial visualization."
     ]
   },
 
   telemetryStats: [
-    { value: "+5 YEARS", label: "AUTOMOTIVE SURFACING", subtext: "Volkswagen, Renault, Valeo" },
-    { value: "AMAROK '24", label: "CLASS-A HEADLIGHTS", subtext: "F2J Lighting (France) & VW" },
+    { value: "+5 YEARS", label: "AUTOMOTIVE DFM & PLASTICS", subtext: "Class-A to Injection Tooling" },
+    { value: "GLOBAL OEMS", label: "VW • STELLANTIS • TOYOTA", subtext: "Serial Production Programs" },
     { value: "CATIA + BLENDER", label: "CAD TO CINEMATIC", subtext: "Micron accuracy to art renders" },
-    { value: "FOUNDER", label: "ESTUDIO 55 LAB", subtext: "CNC craft, 3D ads & venture" }
+    { value: "FOUNDER", label: "ESTUDIO 55 LAB", subtext: "Author furniture & venture" }
   ],
 
   experience: [

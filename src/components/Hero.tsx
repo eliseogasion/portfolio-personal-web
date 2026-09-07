@@ -30,8 +30,8 @@ export default function Hero() {
           </h1>
 
           <p className="text-base sm:text-xl text-zinc-300 font-light leading-relaxed max-w-3xl">
-            Industrial Designer specialized in product engineering and high-fidelity 3D visualization. Backed by +5 years developing Class-A automotive components for leading global automakers—including{' '}
-            <strong className="text-white font-medium">Volkswagen, Stellantis, Renault, and Toyota</strong>—bridging rigorous CAD feasibility with aesthetic clarity and realistic visual communication.
+            Industrial Designer specialized in product engineering and high-fidelity 3D visualization. Backed by +5 years industrializing automotive components for leading global automakers—including{' '}
+            <strong className="text-white font-medium">Volkswagen, Stellantis, Renault, and Toyota</strong>—receiving styling Class-A surfaces and engineering production-ready parts for high-pressure plastic injection tooling, bridging CAD feasibility with aesthetic clarity.
           </p>
         </div>
 
@@ -102,7 +102,7 @@ export default function Hero() {
               +5 Years
             </div>
             <div className="text-xs uppercase tracking-wider text-zinc-500 font-medium">
-              Automotive Surfacing
+              Automotive Engineering &amp; DFM
             </div>
           </div>
 
