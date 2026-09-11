@@ -255,36 +255,51 @@ export const portfolioData: PortfolioConfig = {
       featured: true
     },
     {
-      id: "renault-h1312-exterior",
-      specCode: "RNLT-H1312-PANELS",
-      title: "Renault H1312 LatAm: Exterior Body Panels & Consoles",
-      subtitle: "Production engineering of front/rear bumpers, wheel-arch fenders, body claddings, and center consoles",
+      id: "renault-niagara-h1312",
+      specCode: "RNLT-NIAGARA-H1312",
+      title: "Renault Niagara Pickup (Project H1312): Exterior Bodywork & Cockpit Console",
+      subtitle: "Production DFM & Class-A plastic engineering for Renault's upcoming 2026 half-ton pickup (Santa Isabel Assembly Plant, Córdoba)",
       category: "automotive-oem",
       categoryLabel: "Automotive OEM",
-      clientOrContext: "Renault LatAm / Teknis",
-      year: "2023 — Present",
-      heroImage: "/projects/renault-h1312-panels.svg",
+      clientOrContext: "Renault LatAm / Teknis (Santa Isabel Assembly Plant)",
+      year: "2023 — Present (SOP Late 2026)",
+      heroImage: "/projects/renault-niagara-front-fascia.png",
       gallery: [
-        "/projects/renault-h1312-panels.svg",
-        "/projects/vw-amarok-headlights.jpg"
+        "/projects/renault-niagara-front-fascia.png",
+        "/projects/renault-niagara-front-grille.png",
+        "/projects/renault-niagara-cpillar-cladding.png",
+        "/projects/renault-niagara-cpillar-fasteners.png",
+        "/projects/renault-niagara-roof-spoiler.png",
+        "/projects/renault-niagara-roof-bracket.png",
+        "/projects/renault-niagara-roof-interface.png",
+        "/projects/renault-niagara-console-assembly.png",
+        "/projects/renault-niagara-console-detail.png",
+        "/projects/renault-niagara-console-carrier.png",
+        "/projects/renault-niagara-console-subassembly.png"
       ],
-      tags: ["Renault", "Bodywork", "Fenders & Bumpers", "Plastic Injection", "CATIA V5"],
+      tags: ["Renault Niagara", "Project H1312", "CATIA V5", "Plastic Injection DFM", "Santa Isabel Plant", "Bumper Assembly", "Center Console"],
       tools: ["CATIA V5", "SolidWorks", "KeyShot", "Photoshop"],
       description:
-        "Engineered major exterior and interior plastic assemblies for Renault's new H1312 vehicle platform in Latin America. Emphasized seamless body character lines, tight flush tolerances, and manufacturing compliance for high-pressure polymer injection.",
+        "Comprehensive serial production engineering of exterior body claddings and interior cockpit architecture for Renault's new half-ton Niagara pickup (Project H1312), slated for mass production at the historic Santa Isabel assembly plant in Córdoba, Argentina (late 2026). Transitioned styling Class-A surfaces into fully industrialized injection-molded components complying with strict OEM dimensional tolerances, clearance envelopes, and tooling requirements.",
       processBreakdown: [
-        "Modeled fenders, aerodynamic splitters, and bumper assemblies from initial design sketches.",
-        "Engineered the driver cockpit center console balancing ergonomics, modular storage, and snap-fit assemblies.",
-        "Analyzed assembly-line sequencing and tooling draft angles to avoid sink marks and weld lines.",
-        "Delivered full-vehicle digital mockup integration renders for management reviews."
+        "Front Fascia & Grille: Industrialized the multi-piece front bumper assembly, integrating honeycomb radiator mesh, lower skid plate, sensor brackets, and the illuminated Renault diamond emblem mount.",
+        "C-Pillar & Cargo Bed Interface: Engineered the exterior cabin-to-bed transition molding with embossed diamond texture and integrated brand diamond, designing internal rib grids, clip towers, and fastener clearances against the BIW sheet metal.",
+        "Aerodynamic Roof Deflector: Designed the upper cabin spoiler and its high-stiffness inner mounting bracket for vibration-free serial assembly.",
+        "Driver Cockpit Center Console: Developed the complete structural injection carrier featuring a deep rib matrix, cable routing channels, and modular snap-fit bezels for storage, HVAC controls, and gear selector integration."
       ],
       engineeringSpecs: [
-        { label: "Client", value: "Renault LatAm" },
-        { label: "Assemblies", value: "Fenders, Bumpers, Center Console" },
-        { label: "Material Process", value: "Automotive Grade Polymer Injection" },
-        { label: "Status", value: "Production Tooling Phase" }
+        { label: "Vehicle Program", value: "Renault Niagara Pickup (Project H1312)" },
+        { label: "Manufacturing Plant", value: "Santa Isabel (Córdoba, Argentina)" },
+        { label: "Production Launch", value: "Late 2026 (Serial SOP)" },
+        { label: "Primary Software", value: "CATIA V5 (Part Design & Assembly)" },
+        { label: "Materials", value: "Automotive Injection Polymers (PP+EPDM, ABS-PC)" },
+        { label: "Fastening Systems", value: "Doghouse Bosses, Snap Clips & BIW Weld Studs" }
       ],
-      deliverables: ["Final tooling-ready 3D CAD files", "Assembly gap studies", "Commercial validation renders"],
+      deliverables: [
+        "Tooling-ready 3D CAD parametric models (CATIA V5)",
+        "Mold parting line, draft angle & sink mark validation",
+        "BIW interface clash analysis & gap/flushness compliance studies"
+      ],
       featured: true
     },
     {
