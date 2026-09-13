@@ -31,6 +31,19 @@ export const metadata: Metadata = {
     'High-CTR Marketing Art'
   ],
   authors: [{ name: portfolioData.personal.name }],
+  alternates: {
+    canonical: 'https://eliseo-gasion.vercel.app',
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: `${portfolioData.personal.name} | Industrial Designer & 3D Automotive Artist`,
+    description: portfolioData.personal.headline,
+    images: ['/projects/vw-amarok-headlights.jpg'],
+  },
   openGraph: {
     title: `${portfolioData.personal.name} | Industrial Designer & 3D Automotive Artist`,
     description: portfolioData.personal.headline,
@@ -52,10 +65,41 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Person',
+    name: portfolioData.personal.name,
+    jobTitle: portfolioData.personal.role,
+    address: {
+      '@type': 'PostalAddress',
+      addressLocality: 'Córdoba',
+      addressCountry: 'AR',
+    },
+    email: `mailto:${portfolioData.personal.email}`,
+    telephone: portfolioData.personal.phone,
+    url: 'https://eliseo-gasion.vercel.app',
+    sameAs: [portfolioData.personal.linkedin, portfolioData.personal.artstation],
+    knowsAbout: [
+      'Class-A Surfacing',
+      'CATIA V5',
+      'Plastic Injection DFM',
+      'Blender Cycles',
+      'Automotive 3D Visualization',
+    ],
+    alumniOf: {
+      '@type': 'CollegeOrUniversity',
+      name: 'National University of Córdoba (FAUD UNC)',
+    },
+  };
+
   return (
     <html lang="en" className={`${geistSans.variable} ${geistMono.variable} scroll-smooth dark`}>
       <head>
         <meta name="theme-color" content="#050507" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </head>
       <body className="min-h-screen bg-[#050507] text-zinc-100 antialiased selection:bg-[#FF3E00] selection:text-black font-sans">
         {children}
