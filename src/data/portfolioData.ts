@@ -390,7 +390,9 @@ export const portfolioData: PortfolioConfig = {
         "/projects/porsche-930-driving-empire.jpg",
         "/projects/porsche-930-sunset-drift.jpg",
         "/projects/porsche-930-cyber-hangar.jpg",
-        "/projects/porsche-930-turbo-hero.png"
+        "/projects/porsche-930-turbo-hero.png",
+        "/projects/porsche-930-turbo-process.png",
+        "/projects/porsche-930-turbo-process-shaders.png"
       ],
       tags: ["Porsche 911 Turbo (930)", "Driving Empire Study", "Voldex Candidacy", "1975 Classic", "Blender Cycles", "Fuchs Wheels", "Whale Tail Wing"],
       tools: ["Blender (Cycles)", "Photoshop", "PBR Shaders"],
