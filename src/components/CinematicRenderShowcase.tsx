@@ -61,7 +61,7 @@ export default function CinematicRenderShowcase() {
             <div className="grid grid-cols-2 gap-3">
               <div className="relative aspect-video rounded-lg overflow-hidden border border-white/10 group">
                 <Image
-                  src="/projects/ferioli-hidrogrua-hero.png"
+                  src="/projects/ferioli-hidrogrua-hero.jpg"
                   alt="Ferioli Crane Mechanism Frame"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -73,7 +73,7 @@ export default function CinematicRenderShowcase() {
 
               <div className="relative aspect-video rounded-lg overflow-hidden border border-white/10 group">
                 <Image
-                  src="/projects/ferioli-hidrogrua-detail.png"
+                  src="/projects/ferioli-hidrogrua-detail.jpg"
                   alt="Ferioli Hydraulic Assembly Detail"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"

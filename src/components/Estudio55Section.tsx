@@ -102,7 +102,7 @@ export default function Estudio55Section() {
 
               <div className="relative aspect-video rounded-lg overflow-hidden border border-white/10 group">
                 <Image
-                  src="/projects/estudio55-mesa-saar.png"
+                  src="/projects/estudio55-mesa-saar.jpeg"
                   alt="Saar Table Estudio 55"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"
@@ -114,7 +114,7 @@ export default function Estudio55Section() {
 
               <div className="relative aspect-video rounded-lg overflow-hidden border border-white/10 group">
                 <Image
-                  src="/projects/estudio55-living.png"
+                  src="/projects/estudio55-living.jpeg"
                   alt="Manifiesto Living Scene"
                   fill
                   className="object-cover transition-transform duration-500 group-hover:scale-105"

@@ -3,7 +3,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Image from 'next/image';
 import { ProjectItem } from '@/data/portfolioData';
-import { X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { X, ChevronLeft, ChevronRight, Play } from 'lucide-react';
 
 interface LightboxModalProps {
   project: ProjectItem | null;
@@ -63,7 +63,27 @@ export default function LightboxModal({
     ? project.gallery
     : [project.heroImage];
 
-  const currentImage = currentMediaList[activeMediaIndex] || project.heroImage;
+  // Unified carousel: video (if any) + all gallery images.
+  // Previously projects with videoUrl rendered ONLY the video, making
+  // the image carousel unreachable.
+  const slides: { kind: 'video' | 'image'; src: string }[] = [
+    ...(project.videoUrl
+      ? [{ kind: 'video' as const, src: project.videoUrl }]
+      : []),
+    ...currentMediaList.map((src) => ({ kind: 'image' as const, src })),
+  ];
+
+  // Plain functions on purpose: this code runs after the early return
+  // below, where hooks are not allowed (conditional-hook crash).
+  const goPrevMedia = () => {
+    setActiveMediaIndex((i) => (i - 1 + slides.length) % slides.length);
+  };
+
+  const goNextMedia = () => {
+    setActiveMediaIndex((i) => (i + 1) % slides.length);
+  };
+
+  const activeSlide = slides[activeMediaIndex] || slides[0];
 
   const currentIndex = projectsList.findIndex((p) => p.id === project.id);
   const hasPrev = currentIndex > 0;
@@ -124,44 +144,79 @@ export default function LightboxModal({
         <div className="overflow-y-auto flex-grow divide-y divide-white/5">
           {/* Main Visual Display */}
           <div className="bg-black p-6 flex flex-col items-center justify-center min-h-[360px] md:min-h-[480px]">
-            {project.videoUrl ? (
-              <div className="w-full max-w-4xl aspect-video rounded-xl overflow-hidden bg-black shadow-2xl relative">
-                <video
-                  src={project.videoUrl}
-                  controls
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                  className="w-full h-full object-contain"
-                />
+            <div className="w-full max-w-4xl flex items-center gap-2 sm:gap-3">
+              {slides.length > 1 && (
+                <button
+                  onClick={goPrevMedia}
+                  className="p-2 rounded-full bg-white/5 hover:bg-white/15 text-zinc-300 hover:text-white transition-all flex-shrink-0"
+                  title="Previous media"
+                >
+                  <ChevronLeft className="w-5 h-5" />
+                </button>
+              )}
+
+              <div className="relative flex-grow aspect-video rounded-xl overflow-hidden bg-zinc-950 shadow-2xl">
+                {activeSlide.kind === 'video' ? (
+                  <video
+                    key={activeSlide.src}
+                    src={activeSlide.src}
+                    controls
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    className="w-full h-full object-contain"
+                  />
+                ) : (
+                  <Image
+                    key={activeSlide.src}
+                    src={activeSlide.src}
+                    alt={project.title}
+                    fill
+                    priority
+                    sizes="(max-width: 1200px) 100vw, 1100px"
+                    className="object-contain"
+                  />
+                )}
               </div>
-            ) : (
-              <div className="relative w-full max-w-4xl aspect-[16/10] rounded-xl overflow-hidden shadow-2xl bg-zinc-950">
-                <Image
-                  src={currentImage}
-                  alt={project.title}
-                  fill
-                  priority
-                  sizes="(max-width: 1200px) 100vw, 1100px"
-                  className="object-contain"
-                />
+
+              {slides.length > 1 && (
+                <button
+                  onClick={goNextMedia}
+                  className="p-2 rounded-full bg-white/5 hover:bg-white/15 text-zinc-300 hover:text-white transition-all flex-shrink-0"
+                  title="Next media"
+                >
+                  <ChevronRight className="w-5 h-5" />
+                </button>
+              )}
+            </div>
+
+            {slides.length > 1 && (
+              <div className="text-xs text-zinc-500 font-mono mt-3">
+                {activeMediaIndex + 1} / {slides.length}
               </div>
             )}
 
-            {currentMediaList.length > 1 && (
-              <div className="flex items-center gap-2 mt-6 overflow-x-auto pb-1 max-w-full">
-                {currentMediaList.map((img, idx) => (
+            {slides.length > 1 && (
+              <div className="flex items-center gap-2 mt-3 overflow-x-auto pb-1 max-w-full">
+                {slides.map((slide, idx) => (
                   <button
-                    key={idx}
+                    key={`${slide.kind}-${idx}`}
                     onClick={() => setActiveMediaIndex(idx)}
                     className={`relative w-20 aspect-video rounded-lg overflow-hidden border-2 transition-all flex-shrink-0 ${
                       activeMediaIndex === idx
                         ? 'border-white shadow-lg shadow-white/10 scale-105'
                         : 'border-white/10 opacity-50 hover:opacity-100'
                     }`}
+                    title={slide.kind === 'video' ? 'Play video' : `View image ${idx + 1}`}
                   >
-                    <Image src={img} alt={`Angle ${idx + 1}`} fill className="object-cover" />
+                    {slide.kind === 'video' ? (
+                      <span className="absolute inset-0 flex items-center justify-center bg-zinc-900">
+                        <Play className="w-5 h-5 text-white" />
+                      </span>
+                    ) : (
+                      <Image src={slide.src} alt={`Angle ${idx + 1}`} fill className="object-cover" />
+                    )}
                   </button>
                 ))}
               </div>

@@ -29,7 +29,6 @@ export interface PortfolioConfig {
     phone: string;
     email: string;
     linkedin: string;
-    artstation: string;
     estudio55Instagram: string;
     resumePdf: string;
     englishLevel: string;
@@ -75,16 +74,15 @@ export const portfolioData: PortfolioConfig = {
     phone: "(+54) 351 522-1863",
     email: "eliseogasion@gmail.com",
     linkedin: "https://www.linkedin.com/in/eliseo-gasion",
-    artstation: "https://www.artstation.com/",
     estudio55Instagram: "https://www.instagram.com/estudio.55_/",
-    resumePdf: "/cv/CV-Eliseo-Gasion.pdf",
+    resumePdf: "/cv/CV-Eliseo-Gasion-Render-Artist.pdf",
     englishLevel: "B2 Upper-Intermediate / Fluent Technical & Conversational English",
     availability: "Available for Remote Product Design & Visualization Roles",
     headline:
       "Industrial Designer specialized in product engineering and high-fidelity 3D visualization. Backed by +5 years developing Class-A automotive components for leading global automakers—including Volkswagen, Stellantis, Renault, and Toyota—bridging rigorous CAD feasibility with aesthetic clarity and realistic visual communication.",
     bioParagraphs: [
       "I am an Industrial Designer graduated from the National University of Córdoba (FAUD UNC) with an Electronic & Telecommunications technician background. At Teknis, my core focus has been product industrialization: receiving styling Class-A surfaces from design teams and engineering complete production-ready plastic parts (structural ribbing, bosses, snap-fits, mold parting lines, and draft angles) for high-pressure polymer injection across serial vehicle programs for Volkswagen, Stellantis, Renault, and Toyota.",
-      "My profile bridges two essential disciplines: the analytical rigor of automotive product engineering (injection tooling feasibility, assembly packaging, DFM) and the aesthetic power of high-fidelity 3D visualization. I leverage Blender, KeyShot, and digital post-production to communicate mechanical and automotive design with clarity and realism.",
+      "My profile bridges two essential disciplines: the analytical rigor of automotive product engineering (injection tooling feasibility, assembly packaging, DFM) and the aesthetic power of high-fidelity 3D visualization. I leverage Blender and digital post-production to communicate mechanical and automotive design with clarity and realism.",
       "In parallel, I run Estudio 55—an independent furniture and product design studio where I explore author pieces, physical prototyping, and direct commercial visualization."
     ]
   },
@@ -132,14 +130,15 @@ export const portfolioData: PortfolioConfig = {
       role: "Product Engineer",
       company: "VOLT MOTORS",
       location: "Córdoba, Argentina",
-      highlight: "Urban Electric Vehicles",
+      highlight: "State-Funded Electric Vehicle (Program Halted)",
       description:
-        "Product design and integration of interior and exterior plastic assemblies for Volt's 100% electric vehicle lineup, including headlights, taillights, dashboards, and assembly jigs.",
+        "Product engineering in the engineering department of Volt Motors, a Cordoba-based startup developing a state-funded electric urban vehicle. Owned lighting components end-to-end: housing design, manufacturing tooling, and on-vehicle assembly integration, working directly with mold-makers on fiberglass-lamination tooling. The program was frozen after public funding cuts and never reached production.",
       keyAchievements: [
-        "Integrated front and rear lighting modules adhering to automotive regulatory visibility standards.",
-        "Designed ergonomic dashboard components and assembly fixtures for factory floor integration."
+        "Designed headlight and taillight housings with molds, fixtures, and assembly tooling for fiberglass-laminated construction.",
+        "Surfaced complex geometries and developed tooling in CATIA V5; issued complete technical drawing packages for manufacturing.",
+        "Integrated lighting assemblies from part design through fabrication to final on-vehicle mounting."
       ],
-      toolsUsed: ["SolidWorks", "KeyShot", "AutoCAD", "Industrial Surfacing"]
+      toolsUsed: ["CATIA V5 (Surfacing & Tooling)", "Fiberglass Mold Tooling", "Technical Drawings", "Assembly Fixtures"]
     },
     {
       period: "JUN 2022 — SEP 2022",
@@ -204,7 +203,6 @@ export const portfolioData: PortfolioConfig = {
       code: "RENDERING_ART",
       skills: [
         { name: "Blender (Cycles & Eevee)", level: "Lighting & PBR Shading", featured: true },
-        { name: "KeyShot", level: "Studio Vehicle Renders", featured: true },
         { name: "Adobe Photoshop & Premiere", level: "Retouching & Video", featured: true }
       ]
     },
@@ -212,7 +210,7 @@ export const portfolioData: PortfolioConfig = {
       title: "Real-time & Fabrication",
       code: "ENGINE_FABRICATION",
       skills: [
-        { name: "Roblox Studio", level: "Lighting & Real-time Assets", featured: true },
+        { name: "Roblox Studio", level: "Self-taught, actively learning", featured: false },
         { name: "CNC Machining (CAM / G-Code)", level: "Digital Fabrication", featured: false },
         { name: "Technical English", level: "B2 Upper-Intermediate", featured: true }
       ]
@@ -229,11 +227,12 @@ export const portfolioData: PortfolioConfig = {
       categoryLabel: "Automotive OEM",
       clientOrContext: "Volkswagen LatAm / F2J Lighting (France)",
       year: "2020 — 2022",
-      heroImage: "/projects/vw-amarok-headlights.jpg",
+      heroImage: "/projects/vw-amarok-headlights-main.jpg",
       gallery: [
-        "/projects/vw-amarok-headlights.jpg",
-        "/projects/renault-h1312-panels.svg",
-        "/projects/driving-empire-hypercar.svg"
+        "/projects/vw-amarok-headlights-main.jpg",
+        "/projects/vw-amarok-headlights-front.jpg",
+        "/projects/vw-amarok-headlights-explode.jpg",
+        "/projects/vw-amarok-headlights-04.jpg"
       ],
       tags: ["Volkswagen", "CATIA V5", "Class-A Surfacing", "Headlight Optics", "F2J Lighting France"],
       tools: ["CATIA V5 (GSD)", "3D Laser Scan", "KeyShot", "Adobe Photoshop"],
@@ -311,14 +310,14 @@ export const portfolioData: PortfolioConfig = {
       categoryLabel: "3D Animation & CAD",
       clientOrContext: "Ferioli (Heavy Equipment Manufacturer)",
       year: "2024",
-      heroImage: "/projects/ferioli-hidrogrua-hero.png",
+      heroImage: "/projects/ferioli-hidrogrua-hero.jpg",
       gallery: [
-        "/projects/ferioli-hidrogrua-hero.png",
-        "/projects/ferioli-hidrogrua-detail.png"
+        "/projects/ferioli-hidrogrua-hero.jpg",
+        "/projects/ferioli-hidrogrua-detail.jpg"
       ],
       videoUrl: "/videos/ferioli-hidrogrua-animation.mp4",
       tags: ["Ferioli", "SolidWorks to Blender", "Mechanical Rigging", "PBR Materials", "Cinematic Animation"],
-      tools: ["SolidWorks", "Blender (Cycles)", "KeyShot", "Adobe Premiere Pro"],
+      tools: ["SolidWorks", "Blender (Cycles)", "Adobe Premiere Pro"],
       description:
         "Comprehensive 3D animation and mechanical visualization project for national crane manufacturer Ferioli. Received engineering SolidWorks CAD models and successfully adapted them in Blender: optimized geometry and retopology, modeled auxiliary operational assets, developed custom industrial PBR shaders (powder coating, hydraulic chrome rams, warning decals), and fully rigged the multi-stage telescopic boom, hydraulic cylinders, and stabilizers for realistic kinematic motion animation.",
       processBreakdown: [
@@ -348,13 +347,13 @@ export const portfolioData: PortfolioConfig = {
       heroImage: "/projects/estudio55-silla-enzo.png",
       gallery: [
         "/projects/estudio55-silla-enzo.png",
-        "/projects/estudio55-mesa-saar.png",
-        "/projects/estudio55-living.png",
+        "/projects/estudio55-mesa-saar.jpeg",
+        "/projects/estudio55-living.jpeg",
         "/projects/estudio55-mesa-hans.png"
       ],
       videoUrl: "/videos/estudio55-silla-video.mp4",
       tags: ["Estudio 55", "Author Furniture", "Design Philosophy", "Physical Craft", "3D Visualization"],
-      tools: ["Blender Cycles", "SolidWorks / CAD", "KeyShot", "Photoshop"],
+      tools: ["Blender Cycles", "SolidWorks / CAD", "Photoshop"],
       description:
         "Estudio 55 is my independent furniture design studio and ongoing entrepreneurial venture, run in parallel with my engineering career. It serves as my personal creative laboratory to express my own design philosophy: conceiving author furniture pieces (Enzo Chair, Ponti Chair, Saar Table), bridging physical craft with digital 3D visualization, and curating an authentic brand identity.",
       processBreakdown: [
@@ -394,7 +393,7 @@ export const portfolioData: PortfolioConfig = {
         "/projects/porsche-930-turbo-hero.png"
       ],
       tags: ["Porsche 911 Turbo (930)", "Driving Empire Study", "Voldex Candidacy", "1975 Classic", "Blender Cycles", "Fuchs Wheels", "Whale Tail Wing"],
-      tools: ["Blender (Cycles)", "KeyShot", "Photoshop", "PBR Shaders"],
+      tools: ["Blender (Cycles)", "Photoshop", "PBR Shaders"],
       description:
         "Speculative 3D promotional key art and vehicle asset study created specifically to demonstrate automotive game-art capabilities and pipeline alignment for Voldex's Driving Empire. Features an authentic 1975 Porsche 911 Turbo 3.0 (Type 930) rendered across typical in-game promotional scenarios: coastal highway sunset action, high-tech customization hangar, and editorial showroom presentation.",
       disclaimer:
@@ -421,32 +420,34 @@ export const portfolioData: PortfolioConfig = {
     {
       id: "volt-motors-electric-vehicle",
       specCode: "VOLT-EV-COMPONENTS",
-      title: "VOLT Motors: Electric Vehicle Optics & Dashboard",
-      subtitle: "Component packaging, exterior lighting, and dashboard ergonomics for urban electric vehicles",
+      title: "VOLT Motors: Electric Vehicle Lighting & Manufacturing Tooling",
+      subtitle: "End-to-end lighting development and fiberglass tooling for a state-funded urban EV (program halted before production)",
       category: "automotive-oem",
       categoryLabel: "Automotive OEM",
       clientOrContext: "Volt Motors",
       year: "2022",
-      heroImage: "/projects/volt-motors-ev.svg",
+      heroImage: "/projects/volt-motors-ev-main.jpg",
       gallery: [
-        "/projects/volt-motors-ev.svg",
-        "/projects/renault-h1312-panels.svg"
+        "/projects/volt-motors-ev-main.jpg",
+        "/projects/volt-motors-ev-mockup.jpg",
+        "/projects/volt-motors-ev-side-panel.jpg"
       ],
-      tags: ["Electric Vehicles", "Volt Motors", "Cockpit Ergonomics", "Lighting Modules"],
-      tools: ["SolidWorks", "KeyShot", "AutoCAD", "Photoshop"],
+      tags: ["Electric Vehicles", "Volt Motors", "Lighting Systems", "CATIA V5", "Fiberglass Tooling"],
+      tools: ["CATIA V5 (Surfacing & Tooling)", "Fiberglass Lamination Molds", "Technical Drawings"],
       description:
-        "Engineered interior and exterior body assemblies for Volt Motors' 100% electric vehicle platform. Focused on lightweight plastic integration, aerodynamic front/rear lighting modules, and driver dashboard ergonomics.",
+        "Product engineering for Volt Motors' state-funded electric urban vehicle program in Cordoba. Owned lighting components integrally: housing design, mold and fixture development for fiberglass lamination with local mold-makers, and assembly integration — from part design to on-vehicle mounting. A purely engineering role with no visualization tasks. The program was frozen following public funding cuts and never reached serial production.",
       processBreakdown: [
-        "Studied driver ergonomics and instrument cluster visibility.",
-        "Modeled front and rear light housings with concealed snap-fit mounting tabs.",
-        "Designed assembly fixtures and inspection gauges for the production line."
+        "Designed headlight and taillight housings for fiberglass-laminated construction.",
+        "Developed molds, tooling, and assembly fixtures together with local mold-makers (matriceria).",
+        "Surfaced complex geometries in CATIA V5 and issued complete technical drawing packages for manufacturing and assembly."
       ],
       engineeringSpecs: [
-        { label: "Vehicle Type", value: "100% Electric Urban Vehicle" },
-        { label: "Scope", value: "Optics, Dashboard, Assembly Jigs" },
-        { label: "Manufacturer", value: "Volt Motors" }
+        { label: "Vehicle Program", value: "State-funded electric urban vehicle (prototype stage)" },
+        { label: "Scope", value: "Lighting components, molds & assembly tooling" },
+        { label: "Manufacturing", value: "Fiberglass lamination (matriceria)" },
+        { label: "Program Status", value: "Halted — funding cuts, pre-production" }
       ],
-      deliverables: ["Production 3D models", "Tolerance & assembly prints", "Commercial renders"],
+      deliverables: ["Tooling and mold CAD models", "Manufacturing drawing packages", "Assembly tooling & integration support"],
       featured: false
     }
   ]

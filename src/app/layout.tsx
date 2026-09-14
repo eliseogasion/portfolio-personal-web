@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: `${portfolioData.personal.name} | Industrial Designer & 3D Automotive Artist`,
     description: portfolioData.personal.headline,
-    images: ['/projects/vw-amarok-headlights.jpg'],
+    images: ['/projects/vw-amarok-headlights-main.jpg'],
   },
   openGraph: {
     title: `${portfolioData.personal.name} | Industrial Designer & 3D Automotive Artist`,
@@ -51,9 +51,9 @@ export const metadata: Metadata = {
     locale: 'en_US',
     images: [
       {
-        url: '/projects/vw-amarok-headlights.jpg',
-        width: 1280,
-        height: 720,
+        url: '/projects/vw-amarok-headlights-main.jpg',
+        width: 1242,
+        height: 991,
         alt: 'Eliseo Gasion Portfolio Showcase'
       }
     ]
@@ -78,7 +78,7 @@ export default function RootLayout({
     email: `mailto:${portfolioData.personal.email}`,
     telephone: portfolioData.personal.phone,
     url: 'https://eliseo-gasion.vercel.app',
-    sameAs: [portfolioData.personal.linkedin, portfolioData.personal.artstation],
+    sameAs: [portfolioData.personal.linkedin],
     knowsAbout: [
       'Class-A Surfacing',
       'CATIA V5',

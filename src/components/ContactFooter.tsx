@@ -110,16 +110,6 @@ export default function ContactFooter() {
             </a>
 
             <a
-              href={personal.artstation}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-zinc-400 hover:text-white transition-colors flex items-center gap-1 uppercase tracking-wider text-[11px] font-medium"
-            >
-              <span>ArtStation</span>
-              <ArrowUpRight className="w-3 h-3 opacity-60" />
-            </a>
-
-            <a
               href={personal.estudio55Instagram}
               target="_blank"
               rel="noopener noreferrer"
