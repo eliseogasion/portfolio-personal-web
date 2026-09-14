@@ -160,6 +160,7 @@ export default function LightboxModal({
                   <video
                     key={activeSlide.src}
                     src={activeSlide.src}
+                    poster={project.heroImage}
                     controls
                     autoPlay
                     loop

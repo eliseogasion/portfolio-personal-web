@@ -38,10 +38,11 @@ export default function CinematicRenderShowcase() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Visual Showcase: Real Video & Renders */}
           <div className="lg:col-span-7 space-y-4">
-            <Reveal delay={150}>
+            <Reveal delay={150} className="space-y-8">
               <div className="relative aspect-video rounded-xl overflow-hidden bg-black border border-white/10 shadow-2xl">
               <video
                 src={ferioliProject.videoUrl || "/videos/ferioli-hidrogrua-animation.mp4"}
+                poster="/projects/ferioli-hidrogrua-hero.jpg"
                 controls
                 autoPlay
                 loop
@@ -58,7 +59,7 @@ export default function CinematicRenderShowcase() {
             </div>
 
             {/* Keyframe Stills */}
-            <div className="grid grid-cols-2 gap-3">
+            <div className="grid grid-cols-2 gap-4 sm:gap-5">
               <div className="relative aspect-video rounded-lg overflow-hidden border border-white/10 group">
                 <Image
                   src="/projects/ferioli-hidrogrua-hero.jpg"
